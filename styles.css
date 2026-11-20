@@ -152,3 +152,65 @@ body {
         margin-top: 5px;
     }
 }
+
+
+/* SERVICIO DE PASEO  */
+
+.servicio-paseo {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #faf6f0;
+}
+
+.tarjeta-paseo {
+    width: 215px;
+    height: 212px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.10);
+}
+
+.tarjeta-paseo img {
+    width: 100%;
+    height: 119px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-paseo {
+    padding: 12px 14px;
+}
+
+.contenido-paseo h2 {
+    color: #172d50;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.contenido-paseo p {
+    color: #68768c;
+    font-size: 9px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.btn-paseador {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #39bdb3;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.btn-paseador:hover {
+    background-color: #269e96;
+}
