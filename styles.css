@@ -1,0 +1,216 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #252b36;
+}
+
+/* ENCABEZADO */
+.header {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #172d50;
+    background-image: linear-gradient(
+        rgba(20, 40, 70, 0.35),
+        rgba(20, 40, 70, 0.35)
+    );
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 60px;
+    margin: auto;
+    padding: 10px 32px;
+    background-color: #ffffff;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 75px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* ENLACES */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #43516a;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #172d50;
+    font-weight: 700;
+}
+
+/* BOTONES */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.btn-login,
+.btn-register {
+    padding: 9px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    color: #172d50;
+    border: 1px solid #172d50;
+    background-color: white;
+}
+
+.btn-login:hover {
+    background-color: #eef2f8;
+}
+
+.btn-register {
+    color: white;
+    background-color: #172d50;
+    border: 1px solid #172d50;
+}
+
+.btn-register:hover {
+    background-color: #294b78;
+}
+
+/* SECCIONES PROVISIONALES */
+.placeholder {
+    min-height: 300px;
+    padding: 70px 40px;
+    text-align: center;
+    scroll-margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-buttons {
+        margin-top: 5px;
+    }
+}
+
+
+/* SERVICIO DE PASEO  */
+
+.servicio-paseo {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #faf6f0;
+}
+
+.tarjeta-paseo {
+    width: 215px;
+    height: 212px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.10);
+}
+
+.tarjeta-paseo img {
+    width: 100%;
+    height: 119px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-paseo {
+    padding: 12px 14px;
+}
+
+.contenido-paseo h2 {
+    color: #172d50;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.contenido-paseo p {
+    color: #68768c;
+    font-size: 9px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.btn-paseador {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #39bdb3;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.btn-paseador:hover {
+    background-color: #269e96;
+}
