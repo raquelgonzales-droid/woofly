@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woofly</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -62,6 +63,271 @@
     
     </main>
 
+    <header>
+        <!-- Encabezado y navegación -->
+    </header>
+
+    <main>
+
+        <!-- SECCIONES W1 - W34 -->
+
+        <section id="w1">
+            <!-- W1 -->
+        </section>
+
+        <section id="w2">
+            <!-- W2 -->
+        </section>
+
+        <section id="w3">
+            <!-- W3 -->
+        </section>
+
+        <section id="w4">
+            <!-- W4 -->
+        </section>
+
+        <section id="w5">
+            <!-- W5 -->
+        </section>
+
+        <section id="w6">
+            <!-- W6 -->
+        </section>
+
+        <section id="w7">
+            <!-- W7 -->
+        </section>
+
+        <section id="w8">
+            <!-- W8 -->
+        </section>
+
+        <section id="w9">
+            <!-- W9 -->
+        </section>
+
+        <section id="w10">
+            <!-- W10 -->
+        </section>
+
+        <section id="w11">
+            <!-- W11 -->
+        </section>
+
+        <section id="w12">
+            <!-- W12 -->
+        </section>
+
+        <section id="w13">
+            <!-- W13 -->
+        </section>
+
+        <section id="w14">
+            <!-- W14 -->
+        </section>
+
+        <section id="w15">
+            <!-- W15 -->
+        </section>
+
+        <section id="w16">
+            <!-- W16 -->
+        </section>
+
+        <section id="w17">
+            <!-- W17 -->
+        </section>
+
+        <section id="w18">
+            <!-- W18 -->
+        </section>
+
+        <section id="w19">
+            <!-- W19 -->
+        </section>
+
+        <section id="w20">
+            <!-- W20 -->
+        </section>
+
+        <section id="w21">
+            
+<section id="w21">
+
+    <!-- SECCIÓN 21: SERVICIOS OFRECIDOS -->
+    <div class="w21-card">
+
+        <div class="w21-cabecera">
+            <h1>Servicios ofrecidos</h1>
+
+            <button class="w21-btn w21-btn-sec" type="button" id="w21-abrir">
+                ✏️ Editar
+            </button>
+        </div>
+
+        <ul class="w21-servicios" id="w21-servicios"></ul>
+
+    </div>
+
+    <!-- VENTANA PARA AÑADIR, EDITAR O ELIMINAR SERVICIOS -->
+    <dialog id="w21-ventana" aria-labelledby="w21-titulo-ventana">
+
+        <div class="w21-modal">
+
+            <div class="w21-modal-cab">
+                <h2 id="w21-titulo-ventana">Editar servicios</h2>
+
+                <button class="w21-btn w21-btn-sec w21-cerrar"
+                        type="button"
+                        id="w21-cerrar"
+                        aria-label="Cerrar">
+                    ✕
+                </button>
+            </div>
+
+            <form class="w21-formulario" id="w21-formulario" novalidate>
+
+                <label class="w21-campo">
+                    Icono
+                    <select id="w21-icono">
+                        <option>🐾</option>
+                        <option>🏠</option>
+                        <option>❤️</option>
+                        <option>🦮</option>
+                        <option>🐕</option>
+                        <option>🐈</option>
+                        <option>🛁</option>
+                        <option>✂️</option>
+                        <option>🚗</option>
+                        <option>🩺</option>
+                    </select>
+                </label>
+
+                <label class="w21-campo w21-nombre-campo">
+                    Nombre del servicio
+                    <input id="w21-nombre"
+                           type="text"
+                           maxlength="40"
+                           placeholder="Ej.: Baño y corte">
+                </label>
+
+                <label class="w21-campo">
+                    Precio (Bs)
+                    <input id="w21-precio"
+                           type="number"
+                           min="0"
+                           step="any"
+                           placeholder="0">
+                </label>
+
+                <label class="w21-campo">
+                    Cobro
+                    <select id="w21-unidad">
+                        <option value="">Por servicio</option>
+                        <option value="/día">Por día</option>
+                        <option value="/hora">Por hora</option>
+                    </select>
+                </label>
+
+                <p class="w21-error" id="w21-error" role="alert"></p>
+
+                <div class="w21-acciones">
+                    <button class="w21-btn" type="submit" id="w21-guardar">
+                        Añadir servicio
+                    </button>
+
+                    <button class="w21-btn w21-btn-sec"
+                            type="button"
+                            id="w21-cancelar"
+                            hidden>
+                        Cancelar edición
+                    </button>
+                </div>
+
+            </form>
+
+            <ul class="w21-lista" id="w21-lista"></ul>
+
+            <div class="w21-modal-pie">
+                <button class="w21-btn w21-btn-sec w21-pequeno"
+                        type="button"
+                        id="w21-restaurar">
+                    Restaurar servicios iniciales
+                </button>
+
+                <button class="w21-btn" type="button" id="w21-listo">
+                    Listo
+                </button>
+            </div>
+
+        </div>
+    </dialog>
+
+</section>
+
+
+        </section>
+
+        <section id="w22">
+            <!-- W22 -->
+        </section>
+
+        <section id="w23">
+            <!-- W23 -->
+        </section>
+
+        <section id="w24">
+            <!-- W24 -->
+        </section>
+
+        <section id="w25">
+            <!-- W25 -->
+        </section>
+
+        <section id="w26">
+            <!-- W26 -->
+        </section>
+
+        <section id="w27">
+            <!-- W27 -->
+        </section>
+
+        <section id="w28">
+            <!-- W28 -->
+        </section>
+
+        <section id="w29">
+            <!-- W29 -->
+        </section>
+
+        <section id="w30">
+            <!-- W30 -->
+        </section>
+
+        <section id="w31">
+            <!-- W31 -->
+        </section>
+
+        <section id="w32">
+            <!-- W32 -->
+        </section>
+
+        <section id="w33">
+            <!-- W33 -->
+        </section>
+
+        <section id="w34">
+            <!-- W34 -->
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Pie de página -->
+    </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
