@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios ofrecidos</title>
+
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SECCIÓN 21: SERVICIOS OFRECIDOS -->
+    <section id="w21">
+
+        <div class="w21-card">
+
+            <div class="w21-cabecera">
+                <h1>Servicios ofrecidos</h1>
+
+                <button class="w21-btn w21-btn-sec" type="button" id="w21-abrir">
+                    ✏️ Editar
+                </button>
+            </div>
+
+            <ul class="w21-servicios" id="w21-servicios"></ul>
+
+        </div>
+
+        <dialog id="w21-ventana" aria-labelledby="w21-titulo-ventana">
+
+            <div class="w21-modal">
+
+                <div class="w21-modal-cab">
+                    <h2 id="w21-titulo-ventana">Editar servicios</h2>
+
+                    <button class="w21-btn w21-btn-sec w21-cerrar"
+                            type="button"
+                            id="w21-cerrar"
+                            aria-label="Cerrar">
+                        ✕
+                    </button>
+                </div>
+
+                <form class="w21-formulario" id="w21-formulario" novalidate>
+
+                    <label class="w21-campo">
+                        Icono
+                        <select id="w21-icono">
+                            <option>🐾</option>
+                            <option>🏠</option>
+                            <option>❤️</option>
+                            <option>🦮</option>
+                            <option>🐕</option>
+                            <option>🐈</option>
+                            <option>🛁</option>
+                            <option>✂️</option>
+                            <option>🚗</option>
+                            <option>🩺</option>
+                        </select>
+                    </label>
+
+                    <label class="w21-campo w21-nombre-campo">
+                        Nombre del servicio
+                        <input id="w21-nombre" type="text" maxlength="40"
+                               placeholder="Ej.: Baño y corte">
+                    </label>
+
+                    <label class="w21-campo">
+                        Precio (Bs)
+                        <input id="w21-precio" type="number" min="0"
+                               step="any" placeholder="0">
+                    </label>
+
+                    <label class="w21-campo">
+                        Cobro
+                        <select id="w21-unidad">
+                            <option value="">Por servicio</option>
+                            <option value="/día">Por día</option>
+                            <option value="/hora">Por hora</option>
+                        </select>
+                    </label>
+
+                    <p class="w21-error" id="w21-error" role="alert"></p>
+
+                    <div class="w21-acciones">
+                        <button class="w21-btn" type="submit" id="w21-guardar">
+                            Añadir servicio
+                        </button>
+
+                        <button class="w21-btn w21-btn-sec"
+                                type="button" id="w21-cancelar" hidden>
+                            Cancelar edición
+                        </button>
+                    </div>
+
+                </form>
+
+                <ul class="w21-lista" id="w21-lista"></ul>
+
+                <div class="w21-modal-pie">
+                    <button class="w21-btn w21-btn-sec w21-pequeno"
+                            type="button" id="w21-restaurar">
+                        Restaurar servicios iniciales
+                    </button>
+
+                    <button class="w21-btn" type="button" id="w21-listo">
+                        Listo
+                    </button>
+                </div>
+
+            </div>
+        </dialog>
+
+    </section>
+
+   <script src="js/script.js"></script>
+
+</body>
+</html>
