@@ -218,7 +218,7 @@
   }
 }
 
->>>>>>> main
+
 /* =========================================
    W9 - SERVICIO: VISITA
    Estilos exclusivos de la sección W9
@@ -675,4 +675,232 @@
     #w21 .w21-botones {
         justify-content: flex-end;
     }
+}
+
+
+
+#w27 {
+  --w27-azul: #1f3a6e;
+  --w27-turquesa: #62b9b0;
+  --w27-turquesa-oscuro: #4da39a;
+  --w27-naranja: #e9a63f;
+  --w27-naranja-oscuro: #d6922a;
+  --w27-gris: #8a91a3;
+  --w27-fondo: #f8f5ee;
+  --w27-campo: #efece4;
+  --w27-borde: #dedacd;
+  --w27-blanco: #fff;
+
+  font-family: "Inter", sans-serif;
+  color: var(--w27-azul);
+  background: var(--w27-fondo);
+  padding: 40px 20px 60px;
+}
+
+#w27 *,
+#w27 *::before,
+#w27 *::after {
+  box-sizing: border-box;
+}
+
+#w27 .w27-contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#w27 .w27-encabezado {
+  margin-bottom: 24px;
+}
+
+#w27 .w27-encabezado h2 {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+}
+
+#w27 .w27-encabezado p {
+  color: var(--w27-gris);
+}
+
+/* Filtros */
+
+#w27 .w27-filtros {
+  background: var(--w27-blanco);
+  border-radius: 24px;
+  padding: 28px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  box-shadow: 0 14px 34px rgba(31, 58, 110, 0.1);
+}
+
+#w27 .w27-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 170px;
+  max-width: 220px;
+}
+
+#w27 .w27-campo label {
+  font-size: 0.85rem;
+  color: var(--w27-gris);
+}
+
+#w27 .w27-campo select,
+#w27 .w27-campo input {
+  width: 100%;
+  height: 46px;
+  background: var(--w27-campo);
+  border: 1px solid var(--w27-borde);
+  border-radius: 14px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--w27-azul);
+}
+
+#w27 .w27-campo select:focus,
+#w27 .w27-campo input:focus {
+  outline: 3px solid rgba(98, 185, 176, 0.5);
+  border-color: var(--w27-turquesa);
+}
+
+#w27 .w27-boton-buscar {
+  height: 46px;
+  padding: 0 34px;
+  border: none;
+  border-radius: 14px;
+  background: var(--w27-naranja);
+  color: var(--w27-blanco);
+  font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#w27 .w27-boton-buscar:hover {
+  background: var(--w27-naranja-oscuro);
+  transform: translateY(-2px);
+}
+
+#w27 .w27-boton-buscar:focus-visible {
+  outline: 3px solid var(--w27-azul);
+  outline-offset: 3px;
+}
+
+/* Resultados */
+
+#w27 .w27-contador {
+  margin: 28px 4px 16px;
+  color: var(--w27-gris);
+  font-weight: 500;
+}
+
+#w27 .w27-resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#w27 .w27-tarjeta {
+  background: var(--w27-blanco);
+  border-radius: 24px;
+  padding: 28px 22px 30px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(31, 58, 110, 0.1);
+  transition: transform 0.25s ease;
+}
+
+#w27 .w27-tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+#w27 .w27-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  background: var(--w27-turquesa);
+  color: var(--w27-blanco);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#w27 .w27-tarjeta h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+#w27 .w27-servicio {
+  color: var(--w27-turquesa-oscuro);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+#w27 .w27-zona {
+  color: var(--w27-gris);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+#w27 .w27-calificacion {
+  margin-bottom: 10px;
+}
+
+#w27 .w27-calificacion span {
+  color: var(--w27-naranja);
+}
+
+#w27 .w27-calificacion small {
+  color: var(--w27-gris);
+}
+
+#w27 .w27-precio {
+  color: var(--w27-naranja-oscuro);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+#w27 .w27-boton {
+  display: inline-block;
+  background: var(--w27-turquesa);
+  color: var(--w27-blanco);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 11px 26px;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+#w27 .w27-boton:hover {
+  background: var(--w27-turquesa-oscuro);
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  #w27 {
+    padding: 30px 16px 45px;
+  }
+
+  #w27 .w27-filtros {
+    padding: 22px 18px;
+  }
+
+  #w27 .w27-campo {
+    max-width: none;
+    flex: 1 1 100%;
+  }
+
+  #w27 .w27-boton-buscar {
+    width: 100%;
+  }
+
+  #w27 .w27-encabezado h2 {
+    font-size: 1.5rem;
+  }
 }
