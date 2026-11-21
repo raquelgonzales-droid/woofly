@@ -1,5 +1,6 @@
-
-/* CONFIGURACIÓN GENERAL */
+/* =================================
+   CONFIGURACIÓN GENERAL Y W1 (MENÚ)
+================================= */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f6f8;
+    background-color: #faf6f0;
     color: #252b36;
 }
 
@@ -36,13 +37,11 @@ body {
     padding: 10px 32px;
     background-color: #ffffff;
     border-radius: 15px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-
 
 .logo {
     display: flex;
@@ -116,15 +115,6 @@ body {
     background-color: #294b78;
 }
 
-/* SECCIONES PROVISIONALES */
-.placeholder {
-    min-height: 300px;
-    padding: 70px 40px;
-    text-align: center;
-    scroll-margin-top: 20px;
-}
-
-/* RESPONSIVE */
 @media (max-width: 1000px) {
     .navbar {
         flex-wrap: wrap;
@@ -153,10 +143,10 @@ body {
     }
 }
 
-
-/* SERVICIO DE PASEO  */
-
-.servicio-paseo {
+/* =================================
+   W7 - SERVICIO DE PASEO
+================================= */
+#w7.servicio-paseo {
     width: 100%;
     padding: 20px 0;
     display: flex;
@@ -165,7 +155,7 @@ body {
     background-color: #faf6f0;
 }
 
-.tarjeta-paseo {
+#w7 .tarjeta-paseo {
     width: 215px;
     height: 212px;
     background-color: #ffffff;
@@ -174,31 +164,31 @@ body {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.10);
 }
 
-.tarjeta-paseo img {
+#w7 .tarjeta-paseo img {
     width: 100%;
     height: 119px;
     object-fit: cover;
     display: block;
 }
 
-.contenido-paseo {
+#w7 .contenido-paseo {
     padding: 12px 14px;
 }
 
-.contenido-paseo h2 {
+#w7 .contenido-paseo h2 {
     color: #172d50;
     font-size: 13px;
     margin-bottom: 7px;
 }
 
-.contenido-paseo p {
+#w7 .contenido-paseo p {
     color: #68768c;
     font-size: 9px;
     line-height: 1.4;
     margin-bottom: 10px;
 }
 
-.btn-paseador {
+#w7 .btn-paseador {
     display: block;
     width: 100%;
     padding: 6px;
@@ -211,6 +201,108 @@ body {
     font-weight: bold;
 }
 
-.btn-paseador:hover {
+#w7 .btn-paseador:hover {
+    background-color: #269e96;
+}
+
+/* =================================
+   W13 - PERFIL DE CUIDADOR 2
+================================= */
+#w13 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+    background-color: #faf6f0;
+}
+
+#w13 .w13-tarjeta {
+    width: 100%;
+    max-width: 260px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 28px 20px 26px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(23, 45, 80, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#w13 .w13-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(23, 45, 80, 0.14);
+}
+
+#w13 .w13-foto {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    display: block;
+}
+
+#w13 .w13-nombre {
+    color: #172d50;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+#w13 .w13-servicio {
+    color: #39bdb3;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+#w13 .w13-ubicacion {
+    color: #8c96a6;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+#w13 .w13-calificacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+#w13 .w13-estrella {
+    color: #f5a623;
+    font-size: 15px;
+}
+
+#w13 .w13-puntaje {
+    color: #172d50;
+    font-weight: 700;
+}
+
+#w13 .w13-resenas {
+    color: #8c96a6;
+}
+
+#w13 .w13-precio {
+    color: #f5a623;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+#w13 .w13-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: #39bdb3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+#w13 .w13-btn:hover {
     background-color: #269e96;
 }
