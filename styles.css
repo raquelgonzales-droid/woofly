@@ -306,3 +306,71 @@ body {
 #w13 .w13-btn:hover {
     background-color: #269e96;
 }
+/* =================================
+   SUBPÁGINA PERFIL Y W19 - PRESENTACIÓN
+================================= */
+.perfil-contenedor {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+}
+
+.perfil-ruta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8c96a6;
+    margin-bottom: 24px;
+}
+
+.perfil-ruta a {
+    color: #8c96a6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.perfil-ruta a:hover {
+    color: #172d50;
+}
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.perfil-columna-izq {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* TARJETA W19 - PRESENTACIÓN */
+#w19.w19-tarjeta {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 28px 32px;
+    box-shadow: 0 8px 24px rgba(23, 45, 80, 0.06);
+}
+
+#w19.w19-tarjeta h2 {
+    color: #172d50;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+#w19.w19-tarjeta p {
+    color: #68768c;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+@media (max-width: 850px) {
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+}
