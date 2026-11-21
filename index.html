@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woofly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -24,8 +24,8 @@
             <ul class="nav-links">
                 <li><a href="#w1">Inicio</a></li>
                 <li><a href="#w11">Encontrar cuidador</a></li>
-                <li><a href="#w7">Servicios</a></li>
-                <li><a href="#w37">Cómo funciona</a></li>
+                <li><a href="#w6">Servicios</a></li>
+                <li><a href="comofunciona.html">Cómo funciona</a></li>
                 <li><a href="#w49">Ser cuidador</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
@@ -41,17 +41,32 @@
 
     <main>
 
-        <!-- FRANJA DE BENEFICIOS (W5: BIENESTAR EN LA COLUMNA 3 COMO FIGMA) -->
+        <!-- FRANJA DE BENEFICIOS: W3 (CONFIANZA) + ESPACIO + W5 (BIENESTAR) -->
         <section class="beneficios-seccion">
             <div class="beneficios-grid">
 
-                <!-- Espacio reservado para Beneficio 1 (Confianza) -->
-                <div class="beneficio-espacio"></div>
+                <!-- W3: BENEFICIO CONFIANZA (COMPAÑERA) -->
+                <section id="w3">
+                    <article class="w3-tarjeta">
+                        <div class="w3-icono" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/>
+                                <path d="M8.5 12.2l2.5 2.5 4.5-5"/>
+                            </svg>
+                        </div>
+                        <h2>Confianza</h2>
+                        <p>Encuentra personas verificadas para cuidar y pasear a tu mascota.</p>
+                    </article>
+                </section>
 
                 <!-- Espacio reservado para Beneficio 2 (Tranquilidad) -->
                 <div class="beneficio-espacio"></div>
 
-                <!-- W5: BENEFICIO BIENESTAR -->
+                <!-- W5: BENEFICIO BIENESTAR (RAQUEL) -->
                 <article id="w5" class="w5-tarjeta">
                     <div class="w5-icono">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#eb675e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -65,34 +80,47 @@
             </div>
         </section>
 
-        <!-- W6: TÍTULO DE SERVICIOS -->
+        <!-- W6: TÍTULO DE SERVICIOS (RAQUEL) -->
         <section id="w6" class="w6-encabezado">
             <h2>¿Qué necesita tu mascota hoy?</h2>
             <p>Elige el servicio ideal según lo que tu mascota necesita en este momento.</p>
         </section>
 
-        <!-- W7: SERVICIO DE PASEO -->
-        <section id="w7" class="servicio-paseo">
-            <div class="tarjeta-paseo">
+        <!-- FILA DE SERVICIOS: W7 (PASEO) + ESPACIO + W9 (VISITA) -->
+        <section class="servicios-fila-seccion">
+            <div class="servicios-fila-grid">
 
-                <img src="perro-paseo.png" alt="Perro disfrutando de un paseo">
+                <!-- W7: SERVICIO DE PASEO (RAQUEL) -->
+                <section id="w7" class="servicio-paseo">
+                    <div class="tarjeta-paseo">
+                        <img src="perro-paseo.png" alt="Perro disfrutando de un paseo">
+                        <div class="contenido-paseo">
+                            <h2>Paseo</h2>
+                            <p>Un paseo para mantenerlo activo y feliz.</p>
+                            <a href="#w11" class="btn-paseador">Buscar paseador</a>
+                        </div>
+                    </div>
+                </section>
 
-                <div class="contenido-paseo">
-                    <h2>Paseo</h2>
+                <!-- Espacio reservado para Servicio 2 (Cuidado) -->
+                <div class="servicio-espacio"></div>
 
-                    <p>
-                        Un paseo para mantenerlo activo y feliz.
-                    </p>
-
-                    <a href="#w11" class="btn-paseador">
-                        Buscar paseador
-                    </a>
-                </div>
+                <!-- W9: SERVICIO DE VISITA (COMPAÑERA) -->
+                <section id="w9">
+                    <article class="w9-tarjeta">
+                        <img src="visita.jpg" alt="Una mano extendida saluda a un cachorro que mira hacia arriba">
+                        <div class="w9-contenido">
+                            <h2>Visita</h2>
+                            <p>Atención y compañía en casa.</p>
+                            <a class="w9-boton" href="encontrar.html">Buscar cuidador</a>
+                        </div>
+                    </article>
+                </section>
 
             </div>
         </section>
 
-        <!-- W11: FILTROS DE BÚSQUEDA -->
+        <!-- W11: FILTROS DE BÚSQUEDA (RAQUEL) -->
         <section id="w11" class="w11-filtros" aria-label="Filtros de búsqueda de cuidadores">
             <button type="button" class="w11-pill activo" data-filtro="todos">Todos</button>
             <button type="button" class="w11-pill" data-filtro="paseo">Paseo</button>
@@ -101,407 +129,66 @@
             <button type="button" class="w11-pill" data-filtro="cerca">Cerca de mí</button>
         </section>
 
-        <!-- FILA DE CUIDADORES (MISMO ORDEN QUE FIGMA: LUCÍA 1°, CARLOS 2°) -->
+        <!-- FILA DE CUIDADORES: W12 (LUCÍA) + W13 (CARLOS) + ESPACIO + W15 (DIEGO) -->
         <section class="cuidadores-seccion">
             <div class="cuidadores-grid">
 
-                <!-- W12: PERFIL DE CUIDADOR 1 (LUCÍA FERNÁNDEZ) -->
+                <!-- W12: PERFIL DE CUIDADOR 1 (LUCÍA FERNÁNDEZ - RAQUEL) -->
                 <article id="w12" class="cuidador-tarjeta">
                     <img src="lucia-fernandez.png" alt="Foto de perfil de Lucía Fernández" class="cuidador-foto">
-
                     <h3 class="cuidador-nombre">Lucía Fernández</h3>
-
                     <p class="cuidador-servicio">Paseos y cuidado</p>
-
                     <p class="cuidador-ubicacion">Cochabamba,Bolivia</p>
-
                     <div class="cuidador-calificacion">
                         <span class="cuidador-estrella" aria-hidden="true">★</span>
                         <span class="cuidador-puntaje">4.9</span>
                         <span class="cuidador-resenas">· 128 reseñas</span>
                     </div>
-
                     <p class="cuidador-precio">Desde 50 BS / paseo</p>
-
-                    <!-- ÚNICO BOTÓN QUE REDIRIGE A LA SUBPÁGINA -->
                     <a href="perfil-cuidador.html" class="cuidador-btn">Ver perfil</a>
                 </article>
 
-                <!-- W13: PERFIL DE CUIDADOR 2 (CARLOS RAMÍREZ) -->
+                <!-- W13: PERFIL DE CUIDADOR 2 (CARLOS RAMÍREZ - RAQUEL) -->
                 <article id="w13" class="cuidador-tarjeta">
                     <img src="carlos-ramirez.png" alt="Foto de perfil de Carlos Ramírez" class="cuidador-foto">
-
                     <h3 class="cuidador-nombre">Carlos Ramírez</h3>
-
                     <p class="cuidador-servicio">Cuidado en casa</p>
-
                     <p class="cuidador-ubicacion">La paz,Bolivia</p>
-
                     <div class="cuidador-calificacion">
                         <span class="cuidador-estrella" aria-hidden="true">★</span>
                         <span class="cuidador-puntaje">4.8</span>
                         <span class="cuidador-resenas">· 96 reseñas</span>
                     </div>
-
                     <p class="cuidador-precio">Desde 80 BS / día</p>
-
                     <a href="#w13" class="cuidador-btn">Ver perfil</a>
                 </article>
 
-                <!-- Espacios reservados para Cuidador 3 y Cuidador 4 -->
+                <!-- Espacio reservado para Cuidador 3 (Marta Gómez) -->
                 <div class="cuidador-espacio"></div>
-                <div class="cuidador-espacio"></div>
+
+                <!-- W15: PERFIL DE CUIDADOR 4 (DIEGO TORRES - COMPAÑERA) -->
+                <section id="w15">
+                    <article class="w15-tarjeta">
+                        <img class="w15-foto" src="diego-torres.jpg" alt="Foto de perfil de Diego Torres con su perro">
+                        <h3 class="w15-nombre">Diego Torres</h3>
+                        <p class="w15-servicio">Cuidado y visitas</p>
+                        <p class="w15-ciudad">Santa Cruz, Bolivia</p>
+                        <p class="w15-calificacion">
+                            <span class="w15-estrella">★</span>
+                            <strong>4.7</strong>
+                            <span class="w15-resenas">· 63 reseñas</span>
+                        </p>
+                        <p class="w15-precio">Desde 150 BS / día</p>
+                        <a class="w15-boton" href="perfil.html?id=diego-torres">Ver perfil</a>
+                    </article>
+                </section>
 
             </div>
-        </section>
-
-        <!-- W31: MAPA DE UBICACIÓN -->
-        <section id="w31"></section>
-
-        <!-- W37: PASO 03 - RESERVA -->
-        <section id="w37"></section>
-
-        <!-- W43: SERVICIO DE VISITAS -->
-        <section id="w43"></section>
-
-        <!-- W49: BENEFICIO: CONECTA CON DUEÑOS -->
-        <section id="w49"></section>
-
-    </main>
-    <header>
-        <!-- Encabezado y navegación -->
-    </header>
-
-    <main>
-
-        <!-- SECCIONES W1 - W34 -->
-
-        <section id="w1">
-            <!-- W1 -->
-        </section>
-
-        <section id="w2">
-            <!-- W2 -->
-        </section>
-
-        <section id="w3">
-    <article class="w3-tarjeta">
-        <div class="w3-icono" aria-hidden="true">
-            <!-- Escudo con check: símbolo de seguridad y confianza -->
-            <svg viewBox="0 0 24 24" fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/>
-                <path d="M8.5 12.2l2.5 2.5 4.5-5"/>
-            </svg>
-        </div>
-
-        <h2>Confianza</h2>
-
-        <p>
-            Encuentra personas verificadas para cuidar y pasear a tu mascota.
-        </p>
-    </article>
-</section>
-
-        <section id="w4">
-            <!-- W4 -->
-        </section>
-
-        <section id="w5">
-            <!-- W5 -->
-        </section>
-
-        <section id="w6">
-            <!-- W6 -->
-        </section>
-
-        <section id="w7">
-            <!-- W7 -->
-        </section>
-
-        <section id="w8">
-            <!-- W8 -->
-        </section>
-
-      
-<section id="w9">
-    <article class="w9-tarjeta">
-
-        <img
-            src="visita.jpg"
-            alt="Una mano extendida saluda a un cachorro que mira hacia arriba"
-        >
-
-        <div class="w9-contenido">
-            <h2>Visita</h2>
-
-            <p>Atención y compañía en casa.</p>
-
-            <a class="w9-boton" href="encontrar.html">
-                Buscar cuidador
-            </a>
-        </div>
-
-    </article>
-</section>
-
-
-        <section id="w10">
-            <!-- W10 -->
-        </section>
-
-        <section id="w11">
-            <!-- W11 -->
-        </section>
-
-        <section id="w12">
-            <!-- W12 -->
-        </section>
-
-        <section id="w13">
-            <!-- W13 -->
-        </section>
-
-        <section id="w14">
-            <!-- W14 -->
-        </section>
-
-       
-<section id="w15">
-  <div class="w15-contenedor">
-
-    <h2 class="w15-titulo">Cuidadores disponibles</h2>
-
-    <article class="w15-tarjeta">
-
-      <img
-        class="w15-foto"
-        src="diego-torres.jpg"
-        alt="Foto de perfil de Diego Torres con su perro"
-      >
-
-      <h3 class="w15-nombre">Diego Torres</h3>
-
-      <p class="w15-servicio">Cuidado y visitas</p>
-
-      <p class="w15-ciudad">Santa Cruz, Bolivia</p>
-
-      <p class="w15-calificacion">
-        <span class="w15-estrella">★</span>
-        <strong>4.7</strong>
-        <span class="w15-resenas">· 63 reseñas</span>
-      </p>
-
-      <p class="w15-precio">Desde 150 BS / día</p>
-
-      <a class="w15-boton" href="perfil.html?id=diego-torres">
-        Ver perfil
-      </a>
-
-    </article>
-  </div>
-</section>
-
-
-        <section id="w16">
-            <!-- W16 -->
-        </section>
-
-        <section id="w17">
-            <!-- W17 -->
-        </section>
-
-        <section id="w18">
-            <!-- W18 -->
-        </section>
-
-        <section id="w19">
-            <!-- W19 -->
-        </section>
-
-        <section id="w20">
-            <!-- W20 -->
-        </section>
-
-
-      
-            
-<section id="w21">
-
-    <!-- SECCIÓN 21: SERVICIOS OFRECIDOS -->
-    <div class="w21-card">
-
-        <div class="w21-cabecera">
-            <h1>Servicios ofrecidos</h1>
-
-            <button class="w21-btn w21-btn-sec" type="button" id="w21-abrir">
-                ✏️ Editar
-            </button>
-        </div>
-
-        <ul class="w21-servicios" id="w21-servicios"></ul>
-
-    </div>
-
-    <!-- VENTANA PARA AÑADIR, EDITAR O ELIMINAR SERVICIOS -->
-    <dialog id="w21-ventana" aria-labelledby="w21-titulo-ventana">
-
-        <div class="w21-modal">
-
-            <div class="w21-modal-cab">
-                <h2 id="w21-titulo-ventana">Editar servicios</h2>
-
-                <button class="w21-btn w21-btn-sec w21-cerrar"
-                        type="button"
-                        id="w21-cerrar"
-                        aria-label="Cerrar">
-                    ✕
-                </button>
-            </div>
-
-            <form class="w21-formulario" id="w21-formulario" novalidate>
-
-                <label class="w21-campo">
-                    Icono
-                    <select id="w21-icono">
-                        <option>🐾</option>
-                        <option>🏠</option>
-                        <option>❤️</option>
-                        <option>🦮</option>
-                        <option>🐕</option>
-                        <option>🐈</option>
-                        <option>🛁</option>
-                        <option>✂️</option>
-                        <option>🚗</option>
-                        <option>🩺</option>
-                    </select>
-                </label>
-
-                <label class="w21-campo w21-nombre-campo">
-                    Nombre del servicio
-                    <input id="w21-nombre"
-                           type="text"
-                           maxlength="40"
-                           placeholder="Ej.: Baño y corte">
-                </label>
-
-                <label class="w21-campo">
-                    Precio (Bs)
-                    <input id="w21-precio"
-                           type="number"
-                           min="0"
-                           step="any"
-                           placeholder="0">
-                </label>
-
-                <label class="w21-campo">
-                    Cobro
-                    <select id="w21-unidad">
-                        <option value="">Por servicio</option>
-                        <option value="/día">Por día</option>
-                        <option value="/hora">Por hora</option>
-                    </select>
-                </label>
-
-                <p class="w21-error" id="w21-error" role="alert"></p>
-
-                <div class="w21-acciones">
-                    <button class="w21-btn" type="submit" id="w21-guardar">
-                        Añadir servicio
-                    </button>
-
-                    <button class="w21-btn w21-btn-sec"
-                            type="button"
-                            id="w21-cancelar"
-                            hidden>
-                        Cancelar edición
-                    </button>
-                </div>
-
-            </form>
-
-            <ul class="w21-lista" id="w21-lista"></ul>
-
-            <div class="w21-modal-pie">
-                <button class="w21-btn w21-btn-sec w21-pequeno"
-                        type="button"
-                        id="w21-restaurar">
-                    Restaurar servicios iniciales
-                </button>
-
-                <button class="w21-btn" type="button" id="w21-listo">
-                    Listo
-                </button>
-            </div>
-
-        </div>
-    </dialog>
-
-
-
-        <section id="w22">
-            <!-- W22 -->
-        </section>
-
-        <section id="w23">
-            <!-- W23 -->
-        </section>
-
-        <section id="w24">
-            <!-- W24 -->
-        </section>
-
-        <section id="w25">
-            <!-- W25 -->
-        </section>
-
-        <section id="w26">
-            <!-- W26 -->
-        </section>
-
-        <section id="w27">
-            <!-- W27 -->
-        </section>
-
-        <section id="w28">
-            <!-- W28 -->
-        </section>
-
-        <section id="w29">
-            <!-- W29 -->
-        </section>
-
-        <section id="w30">
-            <!-- W30 -->
-        </section>
-
-        <section id="w31">
-            <!-- W31 -->
-        </section>
-
-        <section id="w32">
-            <!-- W32 -->
-        </section>
-
-        <section id="w33">
-            <!-- W33 -->
-        </section>
-
-        <section id="w34">
-            <!-- W34 -->
         </section>
 
     </main>
-
-    <footer>
-        <!-- Pie de página -->
-    </footer>
 
     <script src="js/script.js"></script>
-
     <script>
         const filtrosW11 = document.querySelectorAll('#w11 .w11-pill');
         filtrosW11.forEach((boton) => {
