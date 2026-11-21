@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Lucía Fernández - Woofly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- W1: MENÚ DE NAVEGACIÓN -->
+    <header id="w1" class="header">
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo-woofly.png" alt="Logo Woofly">
+                </a>
+            </div>
+
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#w11" class="active">Encontrar cuidador</a></li>
+                <li><a href="index.html#w7">Servicios</a></li>
+                <li><a href="index.html#w37">Cómo funciona</a></li>
+                <li><a href="index.html#w49">Ser cuidador</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+
+            <!-- BOTONES -->
+            <div class="nav-buttons">
+                <a href="#" class="btn-login">Iniciar sesión</a>
+                <a href="#" class="btn-register">Registrarme</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="perfil-contenedor">
+
+        <!-- RUTA DE NAVEGACIÓN -->
+        <nav class="perfil-ruta" aria-label="Ruta de navegación">
+            <a href="index.html">Encontrar cuidador</a>
+            <span>›</span>
+            <span>Perfil de Lucía Fernández</span>
+        </nav>
+
+        <!-- DISEÑO EN DOS COLUMNAS SEGÚN FIGMA -->
+        <div class="perfil-grid">
+
+            <!-- COLUMNA IZQUIERDA (CON ESPACIOS RESERVADOS PARA MANTENER EL ORDEN DE FIGMA) -->
+            <div class="perfil-columna-izq">
+
+                <!-- ESPACIO RESERVADO: CABECERA DE LUCÍA FERNÁNDEZ -->
+                <div class="perfil-espacio-cabecera"></div>
+
+                <!-- W19: PRESENTACIÓN -->
+                <section id="w19" class="w19-tarjeta">
+                    <h2>Presentación</h2>
+                    <p>
+                        ¡Hola! Soy Lucía, amante de los animales desde siempre. Disfruto acompañando a las mascotas en sus paseos y cuidándolas como si fueran mías. Ofrezco paseos activos, mucho cariño y comunicación constante con fotos y actualizaciones durante cada servicio.
+                    </p>
+                </section>
+
+                <!-- ESPACIO RESERVADO: EXPERIENCIA, SERVICIOS OFRECIDOS, MASCOTAS Y DISPONIBILIDAD -->
+                <div class="perfil-espacio-intermedio"></div>
+
+                <!-- W25: RESEÑAS DE OTRAS FAMILIAS -->
+                <section id="w25" class="w25-tarjeta">
+                    <h2>Reseñas de otras familias</h2>
+
+                    <div class="w25-lista">
+                        <!-- Reseña 1 -->
+                        <article class="w25-item">
+                            <img src="resena-elena.png" alt="Foto de Elena R." class="w25-avatar">
+                            <div class="w25-contenido">
+                                <div class="w25-cabecera">
+                                    <h3>Elena R.</h3>
+                                    <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+                                </div>
+                                <p>
+                                    Lucía cuidó a Toby durante una semana y todo fue perfecto. Nos enviaba fotos cada día y se notaba que Toby estaba feliz. ¡Totalmente recomendada!
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Reseña 2 -->
+                        <article class="w25-item">
+                            <img src="resena-javier.png" alt="Foto de Javier M." class="w25-avatar">
+                            <div class="w25-contenido">
+                                <div class="w25-cabecera">
+                                    <h3>Javier M.</h3>
+                                    <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+                                </div>
+                                <p>
+                                    Muy puntual y cariñosa con Luna. Los paseos son largos y siempre vuelve contenta y cansada. Repetiremos seguro.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Reseña 3 -->
+                        <article class="w25-item">
+                            <img src="resena-carmen.png" alt="Foto de Carmen L." class="w25-avatar">
+                            <div class="w25-contenido">
+                                <div class="w25-cabecera">
+                                    <h3>Carmen L.</h3>
+                                    <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+                                </div>
+                                <p>
+                                    Confié en ella para cuidar a mis dos gatos y quedé encantada. Muy responsable y atenta a cada detalle. Da mucha tranquilidad.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMNA DERECHA (ESPACIO RESERVADO PARA SOLICITAR SERVICIO) -->
+            <aside class="perfil-columna-der">
+                <div class="perfil-espacio-reserva"></div>
+            </aside>
+
+        </div>
+    </main>
+
+</body>
+</html>
