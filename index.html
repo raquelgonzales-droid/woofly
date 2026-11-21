@@ -15,13 +15,13 @@
 
             <!-- LOGO -->
             <div class="logo">
-               <img src="logo-woofly.png" alt="Logo Woofly">
+                <img src="logo-woofly.png" alt="Logo Woofly">
             </div>
 
             <!-- MENÚ DE NAVEGACIÓN -->
             <ul class="nav-links">
                 <li><a href="#w1">Inicio</a></li>
-                <li><a href="#w13">Encontrar cuidador</a></li>
+                <li><a href="#w11">Encontrar cuidador</a></li>
                 <li><a href="#w7">Servicios</a></li>
                 <li><a href="#w37">Cómo funciona</a></li>
                 <li><a href="#w49">Ser cuidador</a></li>
@@ -36,36 +36,38 @@
 
         </nav>
     </header>
-    <!-- FRANJA DE BENEFICIOS (W5: BIENESTAR) -->
-    <section class="beneficios-seccion">
-        <div class="beneficios-grid">
-
-            <!-- Espacio reservado para Beneficio 1 (si un compañero hace Confianza) -->
-            <div class="beneficio-espacio"></div>
-
-            <!-- W5: BENEFICIO BIENESTAR -->
-            <article id="w5" class="w5-tarjeta">
-                <div class="w5-icono">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#eb675e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                    </svg>
-                </div>
-                <h3>BIENESTAR</h3>
-                <p>Paseos, compañía y atención para mantener a tu mascota feliz.</p>
-            </article>
-
-            <!-- Espacio reservado para Beneficio 3 (si un compañero hace Comodidad) -->
-            <div class="beneficio-espacio"></div>
-
-        </div>
-    </section>
-    <!-- W6: TÍTULO DE SERVICIOS -->
-    <section id="w6" class="w6-encabezado">
-        <h2>¿Qué necesita tu mascota hoy?</h2>
-        <p>Elige el servicio ideal según lo que tu mascota necesita en este momento.</p>
-    </section>
 
     <main>
+
+        <!-- FRANJA DE BENEFICIOS (W5: BIENESTAR EN LA COLUMNA 3 COMO FIGMA) -->
+        <section class="beneficios-seccion">
+            <div class="beneficios-grid">
+
+                <!-- Espacio reservado para Beneficio 1 (Confianza) -->
+                <div class="beneficio-espacio"></div>
+
+                <!-- Espacio reservado para Beneficio 2 (Tranquilidad) -->
+                <div class="beneficio-espacio"></div>
+
+                <!-- W5: BENEFICIO BIENESTAR -->
+                <article id="w5" class="w5-tarjeta">
+                    <div class="w5-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#eb675e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3>BIENESTAR</h3>
+                    <p>Paseos, compañía y atención para mantener a tu mascota feliz.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- W6: TÍTULO DE SERVICIOS -->
+        <section id="w6" class="w6-encabezado">
+            <h2>¿Qué necesita tu mascota hoy?</h2>
+            <p>Elige el servicio ideal según lo que tu mascota necesita en este momento.</p>
+        </section>
 
         <!-- W7: SERVICIO DE PASEO -->
         <section id="w7" class="servicio-paseo">
@@ -80,50 +82,76 @@
                         Un paseo para mantenerlo activo y feliz.
                     </p>
 
-                    <a href="#w13" class="btn-paseador">
+                    <a href="#w11" class="btn-paseador">
                         Buscar paseador
                     </a>
                 </div>
 
             </div>
         </section>
+
         <!-- W11: FILTROS DE BÚSQUEDA -->
-    <section id="w11" class="w11-filtros" aria-label="Filtros de búsqueda de cuidadores">
-        <button type="button" class="w11-pill activo" data-filtro="todos">Todos</button>
-        <button type="button" class="w11-pill" data-filtro="paseo">Paseo</button>
-        <button type="button" class="w11-pill" data-filtro="cuidado">Cuidado</button>
-        <button type="button" class="w11-pill" data-filtro="visita">Visita</button>
-        <button type="button" class="w11-pill" data-filtro="cerca">Cerca de mí</button>
-    </section>
-
-        <!-- W13: PERFIL DE CUIDADOR 2 -->
-        <section id="w13">
-            <article class="w13-tarjeta">
-                <img src="carlos-ramirez.png" alt="Foto de perfil de Carlos Ramírez" class="w13-foto">
-
-                <h3 class="w13-nombre">Carlos Ramírez</h3>
-
-                <p class="w13-servicio">Cuidado en casa</p>
-
-                <p class="w13-ubicacion">La paz,Bolivia</p>
-
-                <div class="w13-calificacion">
-                    <span class="w13-estrella" aria-hidden="true">★</span>
-                    <span class="w13-puntaje">4.8</span>
-                    <span class="w13-resenas">· 96 reseñas</span>
-                </div>
-
-                <p class="w13-precio">Desde 80 BS / día</p>
-
-                <a href="perfil-cuidador.html" class="w13-btn">Ver perfil</a>
-            </article>
+        <section id="w11" class="w11-filtros" aria-label="Filtros de búsqueda de cuidadores">
+            <button type="button" class="w11-pill activo" data-filtro="todos">Todos</button>
+            <button type="button" class="w11-pill" data-filtro="paseo">Paseo</button>
+            <button type="button" class="w11-pill" data-filtro="cuidado">Cuidado</button>
+            <button type="button" class="w11-pill" data-filtro="visita">Visita</button>
+            <button type="button" class="w11-pill" data-filtro="cerca">Cerca de mí</button>
         </section>
 
-        <!-- W19: PRESENTACIÓN -->
-        <section id="w19"></section>
+        <!-- FILA DE CUIDADORES (MISMO ORDEN QUE FIGMA: LUCÍA 1°, CARLOS 2°) -->
+        <section class="cuidadores-seccion">
+            <div class="cuidadores-grid">
 
-        <!-- W25: RESEÑAS DE OTRAS FAMILIAS -->
-        <section id="w25"></section>
+                <!-- W12: PERFIL DE CUIDADOR 1 (LUCÍA FERNÁNDEZ) -->
+                <article id="w12" class="cuidador-tarjeta">
+                    <img src="lucia-fernandez.png" alt="Foto de perfil de Lucía Fernández" class="cuidador-foto">
+
+                    <h3 class="cuidador-nombre">Lucía Fernández</h3>
+
+                    <p class="cuidador-servicio">Paseos y cuidado</p>
+
+                    <p class="cuidador-ubicacion">Cochabamba,Bolivia</p>
+
+                    <div class="cuidador-calificacion">
+                        <span class="cuidador-estrella" aria-hidden="true">★</span>
+                        <span class="cuidador-puntaje">4.9</span>
+                        <span class="cuidador-resenas">· 128 reseñas</span>
+                    </div>
+
+                    <p class="cuidador-precio">Desde 50 BS / paseo</p>
+
+                    <!-- ÚNICO BOTÓN QUE REDIRIGE A LA SUBPÁGINA -->
+                    <a href="perfil-cuidador.html" class="cuidador-btn">Ver perfil</a>
+                </article>
+
+                <!-- W13: PERFIL DE CUIDADOR 2 (CARLOS RAMÍREZ) -->
+                <article id="w13" class="cuidador-tarjeta">
+                    <img src="carlos-ramirez.png" alt="Foto de perfil de Carlos Ramírez" class="cuidador-foto">
+
+                    <h3 class="cuidador-nombre">Carlos Ramírez</h3>
+
+                    <p class="cuidador-servicio">Cuidado en casa</p>
+
+                    <p class="cuidador-ubicacion">La paz,Bolivia</p>
+
+                    <div class="cuidador-calificacion">
+                        <span class="cuidador-estrella" aria-hidden="true">★</span>
+                        <span class="cuidador-puntaje">4.8</span>
+                        <span class="cuidador-resenas">· 96 reseñas</span>
+                    </div>
+
+                    <p class="cuidador-precio">Desde 80 BS / día</p>
+
+                    <a href="#w13" class="cuidador-btn">Ver perfil</a>
+                </article>
+
+                <!-- Espacios reservados para Cuidador 3 y Cuidador 4 -->
+                <div class="cuidador-espacio"></div>
+                <div class="cuidador-espacio"></div>
+
+            </div>
+        </section>
 
         <!-- W31: MAPA DE UBICACIÓN -->
         <section id="w31"></section>
@@ -138,6 +166,16 @@
         <section id="w49"></section>
 
     </main>
+
+    <script>
+        const filtrosW11 = document.querySelectorAll('#w11 .w11-pill');
+        filtrosW11.forEach((boton) => {
+            boton.addEventListener('click', () => {
+                filtrosW11.forEach((b) => b.classList.remove('activo'));
+                boton.classList.add('activo');
+            });
+        });
+    </script>
 
 </body>
 </html>

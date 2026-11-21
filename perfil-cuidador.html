@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Woofly - Perfil de Carlos Ramírez</title>
+    <title>Perfil de Lucía Fernández - Woofly</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
     <!-- W1: MENÚ DE NAVEGACIÓN -->
@@ -14,14 +13,16 @@
         <nav class="navbar">
 
             <!-- LOGO -->
-            <a href="index.html" class="logo">
-               <img src="logo-woofly.png" alt="Logo Woofly">
-            </a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo-woofly.png" alt="Logo Woofly">
+                </a>
+            </div>
 
             <!-- MENÚ DE NAVEGACIÓN -->
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#w13" class="active">Encontrar cuidador</a></li>
+                <li><a href="index.html#w11" class="active">Encontrar cuidador</a></li>
                 <li><a href="index.html#w7">Servicios</a></li>
                 <li><a href="index.html#w37">Cómo funciona</a></li>
                 <li><a href="index.html#w49">Ser cuidador</a></li>
@@ -37,31 +38,36 @@
         </nav>
     </header>
 
-    <!-- CONTENEDOR PRINCIPAL DE LA SUBPÁGINA DE PERFIL -->
     <main class="perfil-contenedor">
 
-        <!-- RUTA DE NAVEGACIÓN (BREADCRUMB) -->
+        <!-- RUTA DE NAVEGACIÓN -->
         <nav class="perfil-ruta" aria-label="Ruta de navegación">
-            <a href="index.html#w13">Encontrar cuidador</a>
+            <a href="index.html">Encontrar cuidador</a>
             <span>›</span>
-            <span>Perfil de Carlos Ramírez</span>
+            <span>Perfil de Lucía Fernández</span>
         </nav>
 
-        <!-- ESTRUCTURA DE DOS COLUMNAS COMO EN FIGMA -->
+        <!-- DISEÑO EN DOS COLUMNAS SEGÚN FIGMA -->
         <div class="perfil-grid">
 
-            <!-- COLUMNA IZQUIERDA (AQUÍ VAN W19 Y LUEGO W25) -->
+            <!-- COLUMNA IZQUIERDA (CON ESPACIOS RESERVADOS PARA MANTENER EL ORDEN DE FIGMA) -->
             <div class="perfil-columna-izq">
+
+                <!-- ESPACIO RESERVADO: CABECERA DE LUCÍA FERNÁNDEZ -->
+                <div class="perfil-espacio-cabecera"></div>
 
                 <!-- W19: PRESENTACIÓN -->
                 <section id="w19" class="w19-tarjeta">
                     <h2>Presentación</h2>
                     <p>
-                        ¡Hola! Soy Carlos, amante de los animales desde siempre. Disfruto acompañando a las mascotas en su día a día y cuidándolas en casa como si fueran parte de mi familia. Ofrezco un ambiente tranquilo, rutinas de juego, mucho cariño y comunicación constante con fotos y actualizaciones durante cada servicio.
+                        ¡Hola! Soy Lucía, amante de los animales desde siempre. Disfruto acompañando a las mascotas en sus paseos y cuidándolas como si fueran mías. Ofrezco paseos activos, mucho cariño y comunicación constante con fotos y actualizaciones durante cada servicio.
                     </p>
                 </section>
 
-<!-- W25: RESEÑAS DE OTRAS FAMILIAS -->
+                <!-- ESPACIO RESERVADO: EXPERIENCIA, SERVICIOS OFRECIDOS, MASCOTAS Y DISPONIBILIDAD -->
+                <div class="perfil-espacio-intermedio"></div>
+
+                <!-- W25: RESEÑAS DE OTRAS FAMILIAS -->
                 <section id="w25" class="w25-tarjeta">
                     <h2>Reseñas de otras familias</h2>
 
@@ -75,7 +81,7 @@
                                     <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
                                 </div>
                                 <p>
-                                    Carlos cuidó a Toby durante una semana en su casa y todo fue perfecto. Nos enviaba fotos cada día y se notaba que Toby estaba feliz. ¡Totalmente recomendado!
+                                    Lucía cuidó a Toby durante una semana y todo fue perfecto. Nos enviaba fotos cada día y se notaba que Toby estaba feliz. ¡Totalmente recomendada!
                                 </p>
                             </div>
                         </article>
@@ -89,7 +95,7 @@
                                     <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
                                 </div>
                                 <p>
-                                    Muy puntual y cariñoso con Luna. Tiene mucha paciencia, mantiene sus horarios de comida y siempre vuelve contenta y tranquila. Repetiremos seguro.
+                                    Muy puntual y cariñosa con Luna. Los paseos son largos y siempre vuelve contenta y cansada. Repetiremos seguro.
                                 </p>
                             </div>
                         </article>
@@ -103,7 +109,7 @@
                                     <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
                                 </div>
                                 <p>
-                                    Confié en él para cuidar a mis dos gatos y quedé encantada. Muy responsable y atento a cada detalle. Da mucha tranquilidad.
+                                    Confié en ella para cuidar a mis dos gatos y quedé encantada. Muy responsable y atenta a cada detalle. Da mucha tranquilidad.
                                 </p>
                             </div>
                         </article>
@@ -112,13 +118,12 @@
 
             </div>
 
-            <!-- COLUMNA DERECHA (ESPACIO RESERVADO PARA EL PANEL DE RESERVA) -->
+            <!-- COLUMNA DERECHA (ESPACIO RESERVADO PARA SOLICITAR SERVICIO) -->
             <aside class="perfil-columna-der">
-                <!-- Aquí va la tarjeta lateral de solicitud de servicio -->
+                <div class="perfil-espacio-reserva"></div>
             </aside>
 
         </div>
-
     </main>
 
 </body>
