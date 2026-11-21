@@ -374,3 +374,71 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* =================================
+   W25 - RESEÑAS DE OTRAS FAMILIAS
+================================= */
+#w25.w25-tarjeta {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 28px 32px;
+    box-shadow: 0 8px 24px rgba(23, 45, 80, 0.06);
+}
+
+#w25.w25-tarjeta h2 {
+    color: #172d50;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.w25-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.w25-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.w25-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.w25-contenido {
+    flex: 1;
+}
+
+.w25-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.w25-cabecera h3 {
+    color: #172d50;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.w25-estrellas {
+    color: #f5a623;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.w25-contenido p {
+    color: #68768c;
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin: 0;
+}
