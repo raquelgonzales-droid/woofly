@@ -144,6 +144,110 @@ body {
 }
 
 /* =================================
+   W5 - BENEFICIO: BIENESTAR
+================================= */
+.beneficios-seccion {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 36px 20px;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+#w5.w5-tarjeta {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(23, 45, 80, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#w5 .w5-icono {
+    width: 56px;
+    height: 56px;
+    background-color: #fde8e8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#w5.w5-tarjeta h3 {
+    color: #172d50;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+}
+
+#w5.w5-tarjeta p {
+    color: #5f6f85;
+    font-size: 14.5px;
+    line-height: 1.55;
+    max-width: 280px;
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio-espacio {
+        display: none;
+    }
+}
+
+/* =================================
+   W6 - TÍTULO DE SERVICIOS
+================================= */
+#w6.w6-encabezado {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 20px 24px;
+    text-align: center;
+}
+
+#w6.w6-encabezado h2 {
+    color: #172d50;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+#w6.w6-encabezado p {
+    color: #5f6f85;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #w6.w6-encabezado h2 {
+        font-size: 28px;
+    }
+
+    #w6.w6-encabezado p {
+        font-size: 14.5px;
+    }
+}
+
+/* =================================
    W7 - SERVICIO DE PASEO
 ================================= */
 #w7.servicio-paseo {
@@ -206,33 +310,84 @@ body {
 }
 
 /* =================================
-   W13 - PERFIL DE CUIDADOR 2
+   W11 - FILTROS DE BÚSQUEDA
 ================================= */
-#w13 {
+#w11.w11-filtros {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px 20px 28px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 16px;
-    background-color: #faf6f0;
+    gap: 14px;
 }
 
-#w13 .w13-tarjeta {
+.w11-pill {
+    background-color: #ffffff;
+    color: #4f5f76;
+    border: 1px solid #e6e8ec;
+    border-radius: 999px;
+    padding: 10px 26px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(23, 45, 80, 0.03);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.w11-pill:hover {
+    border-color: #172d50;
+    color: #172d50;
+    transform: translateY(-1px);
+}
+
+.w11-pill.activo {
+    background-color: #172d50;
+    color: #ffffff;
+    border-color: #172d50;
+    font-weight: 600;
+}
+
+/* =================================
+   W12 & W13 - TARJETAS DE CUIDADORES
+================================= */
+.cuidadores-seccion {
     width: 100%;
-    max-width: 260px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 12px 20px 60px;
+}
+
+.cuidadores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.cuidador-tarjeta {
+    width: 100%;
     background-color: #ffffff;
     border-radius: 24px;
     padding: 28px 20px 26px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(23, 45, 80, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#w13 .w13-tarjeta:hover {
+.cuidador-tarjeta:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(23, 45, 80, 0.14);
 }
 
-#w13 .w13-foto {
+.cuidador-foto {
     width: 96px;
     height: 96px;
     border-radius: 50%;
@@ -241,27 +396,27 @@ body {
     display: block;
 }
 
-#w13 .w13-nombre {
+.cuidador-nombre {
     color: #172d50;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
-#w13 .w13-servicio {
+.cuidador-servicio {
     color: #39bdb3;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 4px;
 }
 
-#w13 .w13-ubicacion {
+.cuidador-ubicacion {
     color: #8c96a6;
     font-size: 13px;
     margin-bottom: 12px;
 }
 
-#w13 .w13-calificacion {
+.cuidador-calificacion {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,28 +425,28 @@ body {
     margin-bottom: 12px;
 }
 
-#w13 .w13-estrella {
+.cuidador-estrella {
     color: #f5a623;
     font-size: 15px;
 }
 
-#w13 .w13-puntaje {
+.cuidador-puntaje {
     color: #172d50;
     font-weight: 700;
 }
 
-#w13 .w13-resenas {
+.cuidador-resenas {
     color: #8c96a6;
 }
 
-#w13 .w13-precio {
+.cuidador-precio {
     color: #f5a623;
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 18px;
 }
 
-#w13 .w13-btn {
+.cuidador-btn {
     display: inline-block;
     padding: 10px 28px;
     background-color: #39bdb3;
@@ -303,9 +458,26 @@ body {
     transition: background-color 0.2s ease;
 }
 
-#w13 .w13-btn:hover {
+.cuidador-btn:hover {
     background-color: #269e96;
 }
+
+@media (max-width: 960px) {
+    .cuidadores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cuidador-espacio {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .cuidadores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =================================
    SUBPÁGINA PERFIL Y W19 - PRESENTACIÓN
 ================================= */
@@ -348,6 +520,19 @@ body {
     gap: 24px;
 }
 
+/* ESPACIOS RESERVADOS PARA MANTENER EL ORDEN DE FIGMA */
+.perfil-espacio-cabecera {
+    height: 120px;
+}
+
+.perfil-espacio-intermedio {
+    height: 410px;
+}
+
+.perfil-espacio-reserva {
+    height: 480px;
+}
+
 /* TARJETA W19 - PRESENTACIÓN */
 #w19.w19-tarjeta {
     background-color: #ffffff;
@@ -373,7 +558,14 @@ body {
     .perfil-grid {
         grid-template-columns: 1fr;
     }
+
+    .perfil-espacio-cabecera,
+    .perfil-espacio-intermedio,
+    .perfil-espacio-reserva {
+        display: none;
+    }
 }
+
 /* =================================
    W25 - RESEÑAS DE OTRAS FAMILIAS
 ================================= */
@@ -441,148 +633,4 @@ body {
     font-size: 13.5px;
     line-height: 1.55;
     margin: 0;
-}
-/* =================================
-   W5 - BENEFICIO: BIENESTAR
-================================= */
-.beneficios-seccion {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 36px 20px;
-}
-
-.beneficios-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    align-items: stretch;
-}
-
-#w5.w5-tarjeta {
-    background-color: #ffffff;
-    border-radius: 24px;
-    padding: 36px 32px;
-    text-align: center;
-    box-shadow: 0 10px 28px rgba(23, 45, 80, 0.06);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#w5 .w5-icono {
-    width: 56px;
-    height: 56px;
-    background-color: #fde8e8;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#w5.w5-tarjeta h3 {
-    color: #172d50;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    margin: 0 0 12px 0;
-}
-
-#w5.w5-tarjeta p {
-    color: #5f6f85;
-    font-size: 14.5px;
-    line-height: 1.55;
-    max-width: 280px;
-    margin: 0;
-}
-
-@media (max-width: 850px) {
-    .beneficios-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .beneficio-espacio {
-        display: none;
-    }
-}
-/* =================================
-   W6 - TÍTULO DE SERVICIOS
-================================= */
-#w6.w6-encabezado {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 40px 20px 24px;
-    text-align: center;
-}
-
-#w6.w6-encabezado h2 {
-    color: #172d50;
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin: 0 0 10px 0;
-}
-
-#w6.w6-encabezado p {
-    color: #5f6f85;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    #w6.w6-encabezado h2 {
-        font-size: 28px;
-    }
-
-    #w6.w6-encabezado p {
-        font-size: 14.5px;
-    }
-}
-/* =================================
-   W11 - FILTROS DE BÚSQUEDA
-================================= */
-#w11.w11-filtros {
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 16px 20px 28px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-}
-
-.w11-pill {
-    background-color: #ffffff;
-    color: #4f5f76;
-    border: 1px solid #e6e8ec;
-    border-radius: 999px;
-    padding: 10px 26px;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(23, 45, 80, 0.03);
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-}
-
-.w11-pill:hover {
-    border-color: #172d50;
-    color: #172d50;
-    transform: translateY(-1px);
-}
-
-.w11-pill.activo {
-    background-color: #172d50;
-    color: #ffffff;
-    border-color: #172d50;
-    font-weight: 600;
 }
