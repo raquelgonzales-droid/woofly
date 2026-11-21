@@ -508,3 +508,39 @@ body {
         display: none;
     }
 }
+/* =================================
+   W6 - TÍTULO DE SERVICIOS
+================================= */
+#w6.w6-encabezado {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 20px 24px;
+    text-align: center;
+}
+
+#w6.w6-encabezado h2 {
+    color: #172d50;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+#w6.w6-encabezado p {
+    color: #5f6f85;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #w6.w6-encabezado h2 {
+        font-size: 28px;
+    }
+
+    #w6.w6-encabezado p {
+        font-size: 14.5px;
+    }
+}
