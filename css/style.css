@@ -84,6 +84,165 @@
 }
 
 /* =========================================
+   W9 - SERVICIO: VISITA
+   Estilos exclusivos de la sección W9
+========================================= */
+
+#w9 {
+    --w9-bg: #f4f0e9;
+    --w9-card: #ffffff;
+    --w9-title: #22345f;
+    --w9-text: #5a6682;
+    --w9-boton: #d2574a;
+    --w9-boton-hover: #b9463a;
+    --w9-shadow: 0 12px 32px rgba(34, 52, 95, 0.14);
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 500px;
+    padding: 24px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--w9-bg);
+
+    font-family: Inter, "Segoe UI", system-ui, -apple-system,
+        Roboto, Arial, sans-serif;
+}
+
+#w9 *,
+#w9 *::before,
+#w9 *::after {
+    box-sizing: border-box;
+}
+
+/* Tarjeta principal */
+
+#w9 .w9-tarjeta {
+    width: 100%;
+    max-width: 460px;
+    overflow: hidden;
+
+    background: var(--w9-card);
+    border-radius: 28px;
+    box-shadow: var(--w9-shadow);
+}
+
+/* Imagen */
+
+#w9 .w9-tarjeta img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Contenido */
+
+#w9 .w9-contenido {
+    padding: 28px 32px 32px;
+}
+
+#w9 .w9-contenido h2 {
+    margin: 0 0 12px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--w9-title);
+}
+
+#w9 .w9-contenido p {
+    margin: 0 0 24px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--w9-text);
+}
+
+/* Botón */
+
+#w9 .w9-boton {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 999px;
+
+    background: var(--w9-boton);
+    color: #ffffff;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+#w9 .w9-boton:hover {
+    background: var(--w9-boton-hover);
+    transform: translateY(-2px);
+}
+
+#w9 .w9-boton:focus-visible {
+    outline: 3px solid var(--w9-title);
+    outline-offset: 3px;
+}
+
+/* Modo oscuro automático */
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) #w9 {
+        --w9-bg: #151a26;
+        --w9-card: #1f2638;
+        --w9-title: #e8edff;
+        --w9-text: #b4bdd6;
+        --w9-boton: #c9503f;
+        --w9-boton-hover: #b0402f;
+        --w9-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+}
+
+/* Modo oscuro manual */
+
+:root[data-theme="dark"] #w9 {
+    --w9-bg: #151a26;
+    --w9-card: #1f2638;
+    --w9-title: #e8edff;
+    --w9-text: #b4bdd6;
+    --w9-boton: #c9503f;
+    --w9-boton-hover: #b0402f;
+    --w9-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 480px) {
+    #w9 .w9-tarjeta {
+        border-radius: 22px;
+    }
+
+    #w9 .w9-tarjeta img {
+        height: 210px;
+    }
+
+    #w9 .w9-contenido {
+        padding: 22px 20px 26px;
+    }
+}
+
+/* Accesibilidad: reducir movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    #w9 .w9-boton {
+        transition: none;
+    }
+
+    #w9 .w9-boton:hover {
+        transform: none;
+    }
+}
+
+/* =========================================
    W21 - SERVICIOS OFRECIDOS
    Estilos exclusivos de la sección 21
 ========================================= */
