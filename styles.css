@@ -442,3 +442,69 @@ body {
     line-height: 1.55;
     margin: 0;
 }
+/* =================================
+   W5 - BENEFICIO: BIENESTAR
+================================= */
+.beneficios-seccion {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 36px 20px;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+#w5.w5-tarjeta {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(23, 45, 80, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#w5 .w5-icono {
+    width: 56px;
+    height: 56px;
+    background-color: #fde8e8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#w5.w5-tarjeta h3 {
+    color: #172d50;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+}
+
+#w5.w5-tarjeta p {
+    color: #5f6f85;
+    font-size: 14.5px;
+    line-height: 1.55;
+    max-width: 280px;
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio-espacio {
+        display: none;
+    }
+}
