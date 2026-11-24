@@ -997,3 +997,155 @@
   }
 }
 
+
+/* =========================================
+   W45 - SER CUIDADOR
+   Estilos exclusivos de la sección W45
+========================================= */
+
+#w45 {
+    --w45-bg: #fbf7f0;
+    --w45-title: #22345f;
+    --w45-text: #5a6682;
+    --w45-boton: #178f82;
+    --w45-boton-hover: #117468;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 500px;
+    padding: 32px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--w45-bg);
+
+    font-family: Inter, "Segoe UI", system-ui, -apple-system,
+        Roboto, Arial, sans-serif;
+}
+
+#w45 *,
+#w45 *::before,
+#w45 *::after {
+    box-sizing: border-box;
+}
+
+/* Distribución principal */
+#w45 .w45-encabezado {
+    width: 100%;
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+/* Título */
+#w45 .w45-texto h1 {
+    margin: 0 0 20px;
+    color: var(--w45-title);
+    font-weight: 800;
+    font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+/* Descripción */
+#w45 .w45-texto p {
+    margin: 0 0 28px;
+    color: var(--w45-text);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 34em;
+}
+
+/* Botón */
+#w45 .w45-boton {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 999px;
+
+    background: var(--w45-boton);
+    color: #ffffff;
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: 1.05rem;
+
+    box-shadow: 0 8px 20px rgba(23, 143, 130, 0.35);
+
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+#w45 .w45-boton:hover {
+    background: var(--w45-boton-hover);
+    transform: translateY(-2px);
+}
+
+#w45 .w45-boton:focus-visible {
+    outline: 3px solid var(--w45-title);
+    outline-offset: 3px;
+}
+
+/* Imagen */
+#w45 .w45-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+
+    border-radius: 28px;
+    box-shadow: 0 12px 32px rgba(34, 52, 95, 0.18);
+}
+
+/* Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) #w45 {
+        --w45-bg: #151a26;
+        --w45-title: #e8edff;
+        --w45-text: #b4bdd6;
+        --w45-boton: #22a595;
+        --w45-boton-hover: #2bb8a7;
+    }
+}
+
+/* Modo oscuro manual */
+:root[data-theme="dark"] #w45 {
+    --w45-bg: #151a26;
+    --w45-title: #e8edff;
+    --w45-text: #b4bdd6;
+    --w45-boton: #22a595;
+    --w45-boton-hover: #2bb8a7;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 800px) {
+    #w45 {
+        align-items: flex-start;
+        padding: 24px 18px;
+    }
+
+    #w45 .w45-encabezado {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    #w45 .w45-boton {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Accesibilidad: reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+    #w45 .w45-boton {
+        transition: none;
+    }
+
+    #w45 .w45-boton:hover {
+        transform: none;
+    }
+}
