@@ -98,3 +98,19 @@
     transform: rotate(90deg);
   }
 }
+/* Estilos adicionales para el Paso 03: RESERVA */
+.step-card--reserva {
+  border-color: rgba(244, 232, 210, 0.95);
+}
+
+.step-card__icon-box--amber {
+  background-color: #e5a33b;
+}
+
+.step-card__number--amber {
+  color: #e5a33b;
+}
+
+.step-card--reserva .step-card__description {
+  max-width: 255px;
+}
