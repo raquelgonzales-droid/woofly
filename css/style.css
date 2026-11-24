@@ -1,4 +1,145 @@
 /* =================================
+   CONFIGURACIÓN GENERAL Y W1 (MENÚ)
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #faf6f0;
+    color: #252b36;
+}
+
+/* ENCABEZADO */
+.header {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #172d50;
+    background-image: linear-gradient(
+        rgba(20, 40, 70, 0.35),
+        rgba(20, 40, 70, 0.35)
+    );
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    width: 100%;
+    max-width: 1120px;
+    min-height: 60px;
+    margin: auto;
+    padding: 10px 28px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 75px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* ENLACES */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #43516a;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #172d50;
+    font-weight: 700;
+}
+
+/* BOTONES */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.btn-login,
+.btn-register {
+    padding: 9px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    color: #172d50;
+    border: 1px solid #172d50;
+    background-color: white;
+}
+
+.btn-login:hover {
+    background-color: #eef2f8;
+}
+
+.btn-register {
+    color: white;
+    background-color: #172d50;
+    border: 1px solid #172d50;
+}
+
+.btn-register:hover {
+    background-color: #294b78;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px;
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-buttons {
+        margin-top: 5px;
+    }
+}
+/* =================================
    W3 - BENEFICIO: CONFIANZA
 ================================= */
 
