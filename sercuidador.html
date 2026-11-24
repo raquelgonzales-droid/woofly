@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -13,167 +14,304 @@
 
 <body>
 
-    <main id="w45">
+    <main>
 
-        <section class="w45-encabezado">
+        <!-- =================================
+             W45 - ENCABEZADO SER CUIDADOR
+        ================================== -->
 
-            <div class="w45-texto">
+        <section id="w45">
 
-                <h1>
-                    Convierte tu amor por las mascotas en una oportunidad.
-                </h1>
+            <div class="w45-encabezado">
 
-                <p>
-                    Únete a Woofly y ofrece tus servicios de paseo y cuidado
-                    a personas que necesitan ayuda con sus mascotas.
-                </p>
+                <div class="w45-texto">
 
-                <a class="w45-boton" href="registro-cuidador.html">
-                    Registrarme como cuidador
-                </a>
+                    <h1>
+                        Convierte tu amor por las mascotas en una oportunidad.
+                    </h1>
 
-            </div>
+                    <p>
+                        Únete a Woofly y ofrece tus servicios de paseo y cuidado
+                        a personas que necesitan ayuda con sus mascotas.
+                    </p>
 
-            <div class="w45-imagen">
+                    <a class="w45-boton" href="#w51">
+                        Registrarme como cuidador
+                    </a>
 
-                <img
-                    src="sercuidadorencabezado.jpg"
-                    alt="Una cuidadora sentada en un bosque abraza a dos perros"
-                >
+                </div>
+
+                <div class="w45-imagen">
+
+                    <img
+                        src="sercuidadorencabezado.jpg"
+                        alt="Una cuidadora sentada en un bosque abraza a dos perros"
+                    >
+
+                </div>
 
             </div>
 
         </section>
 
 
+        <!-- =================================
+             W51 - FORMULARIO DE REGISTRO
+        ================================== -->
 
-<!-- W51 - FORMULARIO DE REGISTRO DE CUIDADOR -->
-<section id="w51">
-    <main class="w51-tarjeta">
+        <section id="w51">
 
-        <h1>Regístrate como cuidador</h1>
+            <div class="w51-tarjeta">
 
-        <p class="w51-intro">
-            Completa tus datos y empieza a recibir solicitudes de mascotas cerca de ti.
-        </p>
+                <h1>Regístrate como cuidador</h1>
 
-        <form id="w51-formulario" novalidate>
-            <div class="w51-rejilla">
+                <p class="w51-intro">
+                    Completa tus datos y empieza a recibir solicitudes de mascotas cerca de ti.
+                </p>
 
-                <div class="w51-campo">
-                    <label for="w51-nombre">
-                        Nombre completo<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text" id="w51-nombre" name="nombre"
-                        placeholder="Escribe tu nombre" autocomplete="name" required>
-                    <span class="w51-msg-error"></span>
-                </div>
+                <form id="w51-formulario" novalidate>
 
-                <div class="w51-campo">
-                    <label for="w51-edad">
-                        Edad<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="number" id="w51-edad" name="edad"
-                        placeholder="Tu edad" min="18" max="99"
-                        inputmode="numeric" required>
-                    <span class="w51-msg-error"></span>
-                </div>
+                    <div class="w51-rejilla">
 
-                <div class="w51-campo">
-                    <label for="w51-zona">
-                        Zona<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text" id="w51-zona" name="zona"
-                        placeholder="Ciudad o barrio" required>
-                    <span class="w51-msg-error"></span>
-                </div>
+                        <!-- Nombre completo -->
 
-                <div class="w51-campo">
-                    <label for="w51-servicio">
-                        Tipo de servicio<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <select id="w51-servicio" name="servicio" required>
-                        <option value="" disabled selected>Selecciona un servicio</option>
-                        <option>Paseo de perros</option>
-                        <option>Cuidado en casa del cuidador</option>
-                        <option>Cuidado en casa del dueño</option>
-                        <option>Guardería de día</option>
-                        <option>Visitas a domicilio</option>
-                    </select>
-                    <span class="w51-msg-error"></span>
-                </div>
+                        <div class="w51-campo">
 
-                <div class="w51-campo w51-completo">
-                    <label for="w51-experiencia">
-                        Experiencia<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <textarea id="w51-experiencia" name="experiencia"
-                        placeholder="Cuéntanos tu experiencia cuidando mascotas..."
-                        required></textarea>
-                    <span class="w51-msg-error"></span>
-                </div>
+                            <label for="w51-nombre">
+                                Nombre completo
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
 
-                <div class="w51-campo w51-completo">
-                    <label for="w51-disponibilidad">
-                        Disponibilidad<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text" id="w51-disponibilidad" name="disponibilidad"
-                        placeholder="Ej. Lunes a viernes, tardes" required>
-                    <span class="w51-msg-error"></span>
-                </div>
+                            <input
+                                type="text"
+                                id="w51-nombre"
+                                name="nombre"
+                                placeholder="Escribe tu nombre"
+                                autocomplete="name"
+                                required
+                            >
 
-                <div class="w51-campo w51-completo">
-                    <span class="w51-etiqueta" id="w51-lbl-foto">
-                        Foto<span class="w51-req" aria-hidden="true">*</span>
-                    </span>
+                            <span class="w51-msg-error"></span>
 
-                    <div class="w51-subida" id="w51-zona-foto">
-                        <input type="file" id="w51-foto" name="foto"
-                            accept="image/png, image/jpeg"
-                            aria-labelledby="w51-lbl-foto">
+                        </div>
 
-                        <img id="w51-vista-previa" alt="Vista previa de tu foto">
 
-                        <svg viewBox="0 0 24 24" fill="none"
-                            stroke-width="1.8" stroke-linecap="round"
-                            stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 15V4M8 8l4-4 4 4M4 14v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
-                        </svg>
+                        <!-- Edad -->
 
-                        <strong id="w51-texto-foto">
-                            Arrastra una foto o haz clic para subir
-                        </strong>
-                        <small>JPG o PNG, máx. 5MB</small>
+                        <div class="w51-campo">
+
+                            <label for="w51-edad">
+                                Edad
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="w51-edad"
+                                name="edad"
+                                placeholder="Tu edad"
+                                min="18"
+                                max="99"
+                                inputmode="numeric"
+                                required
+                            >
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
+
+                        <!-- Zona -->
+
+                        <div class="w51-campo">
+
+                            <label for="w51-zona">
+                                Zona
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="w51-zona"
+                                name="zona"
+                                placeholder="Ciudad o barrio"
+                                required
+                            >
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
+
+                        <!-- Tipo de servicio -->
+
+                        <div class="w51-campo">
+
+                            <label for="w51-servicio">
+                                Tipo de servicio
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
+
+                            <select id="w51-servicio" name="servicio" required>
+
+                                <option value="" disabled selected>
+                                    Selecciona un servicio
+                                </option>
+
+                                <option>Paseo de perros</option>
+                                <option>Cuidado en casa del cuidador</option>
+                                <option>Cuidado en casa del dueño</option>
+                                <option>Guardería de día</option>
+                                <option>Visitas a domicilio</option>
+
+                            </select>
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
+
+                        <!-- Experiencia -->
+
+                        <div class="w51-campo w51-completo">
+
+                            <label for="w51-experiencia">
+                                Experiencia
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
+
+                            <textarea
+                                id="w51-experiencia"
+                                name="experiencia"
+                                placeholder="Cuéntanos tu experiencia cuidando mascotas..."
+                                required
+                            ></textarea>
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
+
+                        <!-- Disponibilidad -->
+
+                        <div class="w51-campo w51-completo">
+
+                            <label for="w51-disponibilidad">
+                                Disponibilidad
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="w51-disponibilidad"
+                                name="disponibilidad"
+                                placeholder="Ej. Lunes a viernes, tardes"
+                                required
+                            >
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
+
+                        <!-- Fotografía -->
+
+                        <div class="w51-campo w51-completo">
+
+                            <span class="w51-etiqueta" id="w51-lbl-foto">
+                                Foto
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </span>
+
+                            <div class="w51-subida" id="w51-zona-foto">
+
+                                <input
+                                    type="file"
+                                    id="w51-foto"
+                                    name="foto"
+                                    accept="image/png, image/jpeg"
+                                    aria-labelledby="w51-lbl-foto"
+                                >
+
+                                <img
+                                    id="w51-vista-previa"
+                                    alt="Vista previa de tu foto"
+                                >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M12 15V4M8 8l4-4 4 4M4 14v5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/>
+                                </svg>
+
+                                <strong id="w51-texto-foto">
+                                    Arrastra una foto o haz clic para subir
+                                </strong>
+
+                                <small>JPG o PNG, máx. 5MB</small>
+
+                            </div>
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
+
+                        <!-- Información de contacto -->
+
+                        <div class="w51-campo w51-completo">
+
+                            <label for="w51-contacto">
+                                Información de contacto
+                                <span class="w51-req" aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="w51-contacto"
+                                name="contacto"
+                                placeholder="Correo electrónico o teléfono"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <span class="w51-msg-error"></span>
+
+                        </div>
+
                     </div>
 
-                    <span class="w51-msg-error"></span>
-                </div>
 
-                <div class="w51-campo w51-completo">
-                    <label for="w51-contacto">
-                        Información de contacto<span class="w51-req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text" id="w51-contacto" name="contacto"
-                        placeholder="Correo electrónico o teléfono"
-                        autocomplete="email" required>
-                    <span class="w51-msg-error"></span>
-                </div>
+                    <!-- Avisos de validación -->
+
+                    <div
+                        id="w51-aviso"
+                        class="w51-aviso"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- Botón de registro -->
+
+                    <button type="submit" class="w51-boton">
+                        Registrarme como cuidador
+                    </button>
+
+                </form>
 
             </div>
 
-            <div id="w51-aviso" class="w51-aviso"
-                role="alert" aria-live="polite"></div>
-
-            <button type="submit" class="w51-boton">
-                Registrarme como cuidador
-            </button>
-        </form>
-    </main>
-</section>
-
-
+        </section>
 
     </main>
 
 </body>
 </html>
+
+
