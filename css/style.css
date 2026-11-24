@@ -1,4 +1,145 @@
 /* =================================
+   CONFIGURACIÓN GENERAL Y W1 (MENÚ)
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #faf6f0;
+    color: #252b36;
+}
+
+/* ENCABEZADO */
+.header {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #172d50;
+    background-image: linear-gradient(
+        rgba(20, 40, 70, 0.35),
+        rgba(20, 40, 70, 0.35)
+    );
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    width: 100%;
+    max-width: 1120px;
+    min-height: 60px;
+    margin: auto;
+    padding: 10px 28px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 75px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* ENLACES */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #43516a;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #172d50;
+    font-weight: 700;
+}
+
+/* BOTONES */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.btn-login,
+.btn-register {
+    padding: 9px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    color: #172d50;
+    border: 1px solid #172d50;
+    background-color: white;
+}
+
+.btn-login:hover {
+    background-color: #eef2f8;
+}
+
+.btn-register {
+    color: white;
+    background-color: #172d50;
+    border: 1px solid #172d50;
+}
+
+.btn-register:hover {
+    background-color: #294b78;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px;
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-buttons {
+        margin-top: 5px;
+    }
+}
+/* =================================
    W3 - BENEFICIO: CONFIANZA
 ================================= */
 
@@ -1149,3 +1290,297 @@
         transform: none;
     }
 }
+
+
+
+/* =========================================
+   W51 - FORMULARIO DE REGISTRO DE CUIDADOR
+========================================= */
+
+#w51 {
+    --w51-fondo: #faf6ee;
+    --w51-tarjeta: #ffffff;
+    --w51-navy: #243b6b;
+    --w51-gris: #64708a;
+    --w51-campo: #f7f8fc;
+    --w51-borde: #e3e7f0;
+    --w51-teal: #67bcb4;
+    --w51-teal-oscuro: #3f9d94;
+    --w51-teal-claro: #f3faf9;
+    --w51-error: #c0392b;
+    --w51-error-fondo: #fdf0ee;
+    --w51-ok: #2e7d5b;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px 16px;
+    color: var(--w51-navy);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#w51 *,
+#w51 *::before,
+#w51 *::after {
+    box-sizing: border-box;
+}
+
+#w51 .w51-tarjeta {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 64px 60px;
+    background: var(--w51-tarjeta);
+    border-radius: 36px;
+    box-shadow: 0 20px 50px rgba(36, 59, 107, .10);
+}
+
+#w51 h1 {
+    margin: 0 0 12px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#w51 .w51-intro {
+    margin: 0 0 36px;
+    text-align: center;
+    color: var(--w51-gris);
+    font-size: 1.05rem;
+}
+
+#w51 .w51-rejilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+}
+
+#w51 .w51-completo {
+    grid-column: 1 / -1;
+}
+
+#w51 .w51-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+#w51 label,
+#w51 .w51-etiqueta {
+    margin-bottom: 8px;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+#w51 .w51-req {
+    margin-left: 2px;
+    color: var(--w51-error);
+}
+
+#w51 input[type="text"],
+#w51 input[type="number"],
+#w51 select,
+#w51 textarea {
+    width: 100%;
+    padding: 16px 22px;
+    border: 1px solid var(--w51-borde);
+    border-radius: 16px;
+    background: var(--w51-campo);
+    color: var(--w51-navy);
+    font: inherit;
+    transition: border-color .15s, box-shadow .15s;
+}
+
+#w51 textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#w51 select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 48px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2364708a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 6 5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+#w51 input::placeholder,
+#w51 textarea::placeholder {
+    color: #a3adc2;
+}
+
+#w51 input:focus,
+#w51 select:focus,
+#w51 textarea:focus,
+#w51 .w51-subida:focus-within {
+    outline: none;
+    border-color: var(--w51-teal);
+    box-shadow: 0 0 0 4px rgba(103, 188, 180, .25);
+}
+
+/* Subida de fotografía */
+
+#w51 .w51-subida {
+    position: relative;
+    display: flex;
+    min-height: 230px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    border: 1px solid #aedbd6;
+    border-radius: 20px;
+    background: var(--w51-teal-claro);
+    text-align: center;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+}
+
+#w51 .w51-subida.arrastrando {
+    border-color: var(--w51-teal);
+    background: #e3f4f2;
+}
+
+#w51 .w51-subida input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#w51 .w51-subida svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--w51-teal);
+}
+
+#w51 .w51-subida strong {
+    font-weight: 500;
+}
+
+#w51 .w51-subida small {
+    color: var(--w51-gris);
+}
+
+#w51 .w51-subida img {
+    display: none;
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+#w51 .w51-subida.w51-con-foto img {
+    display: block;
+}
+
+#w51 .w51-subida.w51-con-foto svg,
+#w51 .w51-subida.w51-con-foto small {
+    display: none;
+}
+
+/* Mensajes de validación */
+
+#w51 .w51-msg-error {
+    display: none;
+    margin-top: 6px;
+    color: var(--w51-error);
+    font-size: .85rem;
+}
+
+#w51 .w51-campo.w51-invalido .w51-msg-error {
+    display: block;
+}
+
+#w51 .w51-campo.w51-invalido input:not([type="file"]),
+#w51 .w51-campo.w51-invalido select,
+#w51 .w51-campo.w51-invalido textarea {
+    border-color: var(--w51-error);
+    background: var(--w51-error-fondo);
+}
+
+#w51 .w51-campo.w51-invalido .w51-subida {
+    border-color: var(--w51-error);
+    background: var(--w51-error-fondo);
+}
+
+#w51 .w51-aviso {
+    display: none;
+    margin: 24px 0 0;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: .95rem;
+}
+
+#w51 .w51-aviso.w51-error {
+    display: block;
+    background: var(--w51-error-fondo);
+    color: var(--w51-error);
+}
+
+#w51 .w51-aviso.w51-ok {
+    display: block;
+    background: #eaf6f0;
+    color: var(--w51-ok);
+}
+
+/* Botón de registro */
+
+#w51 .w51-boton {
+    width: 100%;
+    margin-top: 32px;
+    padding: 20px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--w51-teal);
+    color: #ffffff;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+}
+
+#w51 .w51-boton:hover {
+    background: var(--w51-teal-oscuro);
+}
+
+#w51 .w51-boton:active {
+    transform: scale(.99);
+}
+
+#w51 .w51-boton:focus-visible {
+    outline: 3px solid var(--w51-navy);
+    outline-offset: 3px;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media (max-width: 720px) {
+    #w51 {
+        padding: 16px 10px;
+    }
+
+    #w51 .w51-tarjeta {
+        padding: 36px 22px 40px;
+        border-radius: 28px;
+    }
+
+    #w51 h1 {
+        font-size: 1.6rem;
+    }
+
+    #w51 .w51-rejilla {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #w51 *,
+    #w51 *::before,
+    #w51 *::after {
+        transition: none !important;
+    }
+  }
