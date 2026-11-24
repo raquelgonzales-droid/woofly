@@ -1,0 +1,191 @@
+:root {
+  --woofly-bg: #faf6ee;
+  --woofly-navy: #183661;
+  --woofly-text-secondary: #5d6b82;
+  --woofly-text-muted: #949ca8;
+  --woofly-mint-bg: #e6f7f4;
+  --woofly-mint-text: #35a795;
+  --woofly-pill-bg: #ffffff;
+  --woofly-pill-border: #e5e2dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--woofly-bg);
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--woofly-navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+.woofly-profile-wrapper {
+  background-color: var(--woofly-bg);
+  padding: 28px 24px 40px;
+}
+
+.woofly-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb */
+.woofly-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #8f8a82;
+  margin-bottom: 24px;
+}
+
+.woofly-breadcrumb__link {
+  color: #8f8a82;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.woofly-breadcrumb__link:hover {
+  color: var(--woofly-navy);
+  text-decoration: underline;
+}
+
+.woofly-breadcrumb__current {
+  color: #78736b;
+  font-weight: 500;
+}
+
+/* Sección principal del encabezado del perfil */
+.caregiver-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Foto con bordes redondeados estilo squircle */
+.caregiver-header__avatar-box {
+  flex-shrink: 0;
+  width: 136px;
+  height: 136px;
+  border-radius: 34px;
+  overflow: hidden;
+  background-color: #ebe5d8;
+}
+
+.caregiver-header__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información derecha */
+.caregiver-header__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.caregiver-header__name {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--woofly-navy);
+}
+
+.caregiver-header__subtitle {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--woofly-text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Calificación + Reseñas + Verificada */
+.caregiver-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.caregiver-header__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.caregiver-header__score {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--woofly-navy);
+}
+
+.caregiver-header__reviews {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--woofly-text-muted);
+}
+
+.caregiver-header__verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--woofly-mint-bg);
+  color: var(--woofly-mint-text);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 9999px;
+}
+
+/* Etiquetas de servicios */
+.caregiver-header__services {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.caregiver-header__service-tag {
+  background-color: var(--woofly-pill-bg);
+  border: 1px solid var(--woofly-pill-border);
+  color: var(--woofly-text-secondary);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 9999px;
+}
+
+/* Adaptación móvil */
+@media (max-width: 640px) {
+  .caregiver-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .caregiver-header__avatar-box {
+    width: 112px;
+    height: 112px;
+    border-radius: 28px;
+  }
+
+  .caregiver-header__name {
+    font-size: 28px;
+  }
+
+  .caregiver-header__subtitle {
+    font-size: 15px;
+  }
+}
