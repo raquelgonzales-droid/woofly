@@ -16,6 +16,7 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="paso-elige.css">
 </head>
 
 <body>
@@ -42,7 +43,61 @@
       </div>
 
     </section>
+<!-- PASO 02: ELIGE -->
+    <section class="steps-section" aria-label="Pasos de funcionamiento">
+      <div class="steps-flow">
+        <article class="step-card">
+          <!-- Ícono de selección -->
+          <div class="step-card__icon-box" aria-hidden="true">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#FFFFFF"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="3.5 6.5 5.5 8.5 9 4.5"></polyline>
+              <line x1="12" y1="6.5" x2="20.5" y2="6.5"></line>
+              <polyline points="3.5 12 5.5 14 9 10"></polyline>
+              <line x1="12" y1="12" x2="20.5" y2="12"></line>
+              <polyline points="3.5 17.5 5.5 19.5 9 15.5"></polyline>
+              <line x1="12" y1="17.5" x2="20.5" y2="17.5"></line>
+            </svg>
+          </div>
 
+          <!-- Número 02 -->
+          <span class="step-card__number">02</span>
+
+          <!-- Título ELIGE -->
+          <h3 class="step-card__title">ELIGE</h3>
+
+          <!-- Descripción -->
+          <p class="step-card__description">
+            Revisa perfiles, servicios, disponibilidad y reseñas.
+          </p>
+        </article>
+
+        <!-- Flecha de conexión hacia el siguiente paso -->
+        <div class="step-arrow" aria-hidden="true">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="13 6 19 12 13 18"></polyline>
+          </svg>
+        </div>
+      </div>
+    </section>
   </main>
 
 </body>
