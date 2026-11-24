@@ -455,3 +455,290 @@
 
 })();
 
+
+/* =========================================
+   W51 - FORMULARIO DE REGISTRO DE CUIDADOR
+========================================= */
+
+(function () {
+    const form = document.getElementById('w51-formulario');
+
+    // Si la página no contiene W51, no ejecuta este código.
+    if (!form) return;
+
+    const aviso = document.getElementById('w51-aviso');
+    const inputFoto = document.getElementById('w51-foto');
+    const zonaFoto = document.getElementById('w51-zona-foto');
+    const vista = document.getElementById('w51-vista-previa');
+    const textoFoto = document.getElementById('w51-texto-foto');
+
+    const MAX_BYTES = 5 * 1024 * 1024;
+    const TIPOS = ['image/jpeg', 'image/png'];
+
+    // Validaciones de los campos
+    const reglas = {
+        nombre: v =>
+            v.length < 3
+                ? 'Escribe tu nombre completo (mínimo 3 letras).'
+                : !/^[\p{L}\s'.-]+$/u.test(v)
+                    ? 'El nombre solo puede contener letras.'
+                    : '',
+
+        edad: v =>
+            v === ''
+                ? 'Indica tu edad.'
+                : (!/^\d+$/.test(v) || +v < 18 || +v > 99)
+                    ? 'Debes ser mayor de 18 años (entre 18 y 99).'
+                    : '',
+
+        zona: v =>
+            v.length < 2
+                ? 'Indica tu ciudad o barrio.'
+                : '',
+
+        servicio: v =>
+            v === ''
+                ? 'Selecciona un tipo de servicio.'
+                : '',
+
+        experiencia: v =>
+            v.length < 20
+                ? 'Cuéntanos un poco más (mínimo 20 caracteres).'
+                : '',
+
+        disponibilidad: v =>
+            v.length < 3
+                ? 'Indica tus días y horarios disponibles.'
+                : '',
+
+        contacto: v => {
+            const correo = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+            const telefono = /^\+?[\d\s-]{7,15}$/.test(v);
+
+            return (correo || telefono)
+                ? ''
+                : 'Escribe un correo válido o un teléfono de 7 a 15 dígitos.';
+        }
+    };
+
+    // Mostrar u ocultar errores
+    function mostrarError(campoEl, mensaje) {
+        const contenedor = campoEl.closest('.w51-campo');
+
+        contenedor.classList.toggle('w51-invalido', !!mensaje);
+        contenedor.querySelector('.w51-msg-error').textContent = mensaje;
+
+        if (campoEl.setAttribute) {
+            campoEl.setAttribute(
+                'aria-invalid',
+                mensaje ? 'true' : 'false'
+            );
+        }
+    }
+
+    // Validar un campo
+    function validarCampo(nombre) {
+        const el = form.elements[nombre];
+        const mensaje = reglas[nombre](el.value.trim());
+
+        mostrarError(el, mensaje);
+
+        return mensaje === '';
+    }
+
+    // Validar fotografía
+    function validarFoto() {
+        const archivo = inputFoto.files[0];
+        let mensaje = '';
+
+        if (!archivo) {
+            mensaje = 'Sube una foto tuya.';
+        } else if (!TIPOS.includes(archivo.type)) {
+            mensaje = 'El archivo debe ser JPG o PNG.';
+        } else if (archivo.size > MAX_BYTES) {
+            mensaje = 'La foto pesa más de 5MB. Elige una más ligera.';
+        }
+
+        mostrarError(inputFoto, mensaje);
+
+        return mensaje === '';
+    }
+
+    // Validación al salir de cada campo
+    Object.keys(reglas).forEach(nombre => {
+        const el = form.elements[nombre];
+
+        el.addEventListener('blur', () => {
+            validarCampo(nombre);
+        });
+
+        el.addEventListener('input', () => {
+            if (
+                el.closest('.w51-campo')
+                    .classList.contains('w51-invalido')
+            ) {
+                validarCampo(nombre);
+            }
+        });
+    });
+
+    // Vista previa de la fotografía
+    inputFoto.addEventListener('change', () => {
+        const archivo = inputFoto.files[0];
+
+        if (
+            archivo &&
+            TIPOS.includes(archivo.type) &&
+            archivo.size <= MAX_BYTES
+        ) {
+            vista.src = URL.createObjectURL(archivo);
+            zonaFoto.classList.add('w51-con-foto');
+            textoFoto.textContent = archivo.name;
+        } else {
+            zonaFoto.classList.remove('w51-con-foto');
+            vista.removeAttribute('src');
+            textoFoto.textContent =
+                'Arrastra una foto o haz clic para subir';
+        }
+
+        validarFoto();
+    });
+
+    // Efecto visual al arrastrar una fotografía
+    ['dragenter', 'dragover'].forEach(evento => {
+        zonaFoto.addEventListener(evento, () => {
+            zonaFoto.classList.add('arrastrando');
+        });
+    });
+
+    ['dragleave', 'drop'].forEach(evento => {
+        zonaFoto.addEventListener(evento, () => {
+            zonaFoto.classList.remove('arrastrando');
+        });
+    });
+
+    // Convertir fotografía a formato Data URL
+    function leerComoDataURL(archivo) {
+        return new Promise((resolve, reject) => {
+            const lector = new FileReader();
+
+            lector.onload = () => resolve(lector.result);
+            lector.onerror = reject;
+
+            lector.readAsDataURL(archivo);
+        });
+    }
+
+    // Enviar formulario
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        aviso.className = 'w51-aviso';
+        aviso.textContent = '';
+
+        // Validar todos los campos
+        const resultados = Object.keys(reglas).map(validarCampo);
+        resultados.push(validarFoto());
+
+        if (resultados.includes(false)) {
+            aviso.className = 'w51-aviso w51-error';
+            aviso.textContent =
+                'Revisa los campos marcados en rojo: faltan datos o son incorrectos.';
+
+            const primero = form.querySelector(
+                '.w51-invalido input, .w51-invalido select, .w51-invalido textarea'
+            );
+
+            if (primero) primero.focus();
+
+            return;
+        }
+
+        // Crear solicitud del cuidador
+        let solicitud;
+
+        try {
+            solicitud = {
+                id: Date.now(),
+                fecha: new Date().toISOString(),
+                nombre: form.elements.nombre.value.trim(),
+                edad: Number(form.elements.edad.value),
+                zona: form.elements.zona.value.trim(),
+                servicio: form.elements.servicio.value,
+                experiencia: form.elements.experiencia.value.trim(),
+                disponibilidad: form.elements.disponibilidad.value.trim(),
+                contacto: form.elements.contacto.value.trim(),
+                foto: await leerComoDataURL(inputFoto.files[0])
+            };
+        } catch (error) {
+            aviso.className = 'w51-aviso w51-error';
+            aviso.textContent =
+                'No pudimos procesar tu fotografía. Inténtalo de nuevo.';
+            return;
+        }
+
+        // Guardar solicitud en el navegador
+        try {
+            const lista = JSON.parse(
+                localStorage.getItem('woofly_cuidadores') || '[]'
+            );
+
+            lista.push(solicitud);
+
+            localStorage.setItem(
+                'woofly_cuidadores',
+                JSON.stringify(lista)
+            );
+
+        } catch (error) {
+            // Intentar guardar los datos sin la fotografía
+            try {
+                const lista = JSON.parse(
+                    localStorage.getItem('woofly_cuidadores') || '[]'
+                );
+
+                lista.push({
+                    ...solicitud,
+                    foto: '(foto no guardada: sin espacio)'
+                });
+
+                localStorage.setItem(
+                    'woofly_cuidadores',
+                    JSON.stringify(lista)
+                );
+
+            } catch (error2) {
+                aviso.className = 'w51-aviso w51-error';
+                aviso.textContent =
+                    'No pudimos guardar tu registro. Inténtalo de nuevo.';
+                return;
+            }
+        }
+
+        // Confirmación de registro
+        console.log('Solicitud registrada:', solicitud);
+
+        aviso.className = 'w51-aviso w51-ok';
+        aviso.textContent =
+            '¡Listo, ' + solicitud.nombre.split(' ')[0] +
+            '! Registramos tu solicitud como cuidador.';
+
+        form.reset();
+
+        zonaFoto.classList.remove('w51-con-foto');
+        vista.removeAttribute('src');
+
+        textoFoto.textContent =
+            'Arrastra una foto o haz clic para subir';
+
+        form.querySelectorAll('.w51-invalido').forEach(campo => {
+            campo.classList.remove('w51-invalido');
+        });
+
+        aviso.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    });
+
+})();
