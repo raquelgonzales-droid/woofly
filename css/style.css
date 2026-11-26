@@ -1365,25 +1365,7 @@ body {
     box-shadow: 0 12px 32px rgba(34, 52, 95, 0.18);
 }
 
-/* Modo oscuro automático */
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) #w45 {
-        --w45-bg: #151a26;
-        --w45-title: #e8edff;
-        --w45-text: #b4bdd6;
-        --w45-boton: #22a595;
-        --w45-boton-hover: #2bb8a7;
-    }
-}
 
-/* Modo oscuro manual */
-:root[data-theme="dark"] #w45 {
-    --w45-bg: #151a26;
-    --w45-title: #e8edff;
-    --w45-text: #b4bdd6;
-    --w45-boton: #22a595;
-    --w45-boton-hover: #2bb8a7;
-}
 
 /* Adaptación para celulares */
 @media (max-width: 800px) {
