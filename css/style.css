@@ -1,6 +1,5 @@
 
-/* =================================
-   CONFIGURACIÓN GENERAL Y W1 (MENÚ)
+
 * {
     margin: 0;
     padding: 0;
@@ -268,8 +267,8 @@ body {
 }
 
 
-/* =================================
-   W3 - BENEFICIO: CONFIANZA
+/* 
+   W3 - BENEFICIO: CONFIANZA */
 
 #w3 {
     --w3-bg: #f4f0e9;
@@ -352,6 +351,7 @@ body {
         transform: none;
     }
 }
+
 
 
 
@@ -1173,11 +1173,9 @@ body {
     font-size: 1.5rem;
   }
 }
-}
 
 
-/* =================================
-   W39 - LLAMADO A LA ACCIÓN
+
 
 #w39 {
   --w39-azul: #1f3a6e;
@@ -1267,9 +1265,7 @@ body {
 }
 
 
-/* =========================================
-   W45 - SER CUIDADOR
-   Estilos exclusivos de la sección W45
+
 
 #w45 {
     --w45-bg: #fbf7f0;
@@ -1420,8 +1416,7 @@ body {
 
 
 
-/* =========================================
-   W51 - FORMULARIO DE REGISTRO DE CUIDADOR
+
 
 #w51 {
     --w51-fondo: #faf6ee;
