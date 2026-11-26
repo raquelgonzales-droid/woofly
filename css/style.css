@@ -593,31 +593,6 @@ body {
     outline-offset: 3px;
 }
 
-/* Modo oscuro automático */
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) #w9 {
-        --w9-bg: #151a26;
-        --w9-card: #1f2638;
-        --w9-title: #e8edff;
-        --w9-text: #b4bdd6;
-        --w9-boton: #c9503f;
-        --w9-boton-hover: #b0402f;
-        --w9-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-    }
-}
-
-/* Modo oscuro manual */
-
-:root[data-theme="dark"] #w9 {
-    --w9-bg: #151a26;
-    --w9-card: #1f2638;
-    --w9-title: #e8edff;
-    --w9-text: #b4bdd6;
-    --w9-boton: #c9503f;
-    --w9-boton-hover: #b0402f;
-    --w9-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-}
 
 /* Adaptación para celulares */
 
