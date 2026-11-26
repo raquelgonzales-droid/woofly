@@ -1,0 +1,196 @@
+.caregivers-list-section {
+  background-color: #faf6ee;
+  padding: 20px 24px 48px;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.caregivers-list-container {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.caregiver-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 8px 24px rgba(24, 54, 97, 0.05);
+  border: 1px solid rgba(231, 225, 213, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caregiver-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(24, 54, 97, 0.09);
+}
+
+.caregiver-card__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.caregiver-card__avatar-box {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  overflow: hidden;
+  background-color: #ebe5d8;
+}
+
+.caregiver-card__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.caregiver-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.caregiver-card__name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #183661;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.caregiver-card__rating-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.caregiver-card__score {
+  font-size: 14px;
+  font-weight: 700;
+  color: #183661;
+}
+
+.caregiver-card__reviews {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #949ca8;
+}
+
+.caregiver-card__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.caregiver-card__tag {
+  background-color: #e6f7f4;
+  color: #35a795;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 9999px;
+}
+
+.caregiver-card__bottom-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.caregiver-card__availability {
+  color: #35a795;
+  font-weight: 600;
+}
+
+.caregiver-card__distance {
+  color: #8e99a8;
+  font-weight: 400;
+}
+
+.caregiver-card__right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.caregiver-card__price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.caregiver-card__price-unit {
+  font-size: 13px;
+  font-weight: 500;
+  color: #8e99a8;
+}
+
+.caregiver-card__price-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f3a11a;
+  letter-spacing: -0.02em;
+}
+
+.caregiver-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #3eb5a3;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 11px 28px;
+  border-radius: 22px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.caregiver-card__btn:hover {
+  background-color: #329d8d;
+}
+
+.caregiver-card__btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  .caregiver-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px;
+  }
+
+  .caregiver-card__right {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f0ece3;
+    padding-top: 12px;
+  }
+
+  .caregiver-card__btn {
+    padding: 10px 24px;
+  }
+
+  .caregiver-card__btn br {
+    display: none;
+  }
+}

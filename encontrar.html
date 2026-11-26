@@ -1,11 +1,111 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Encontrar cuidadores | Woofly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos generales de Woofly -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="tarjeta-cuidador.css">
 </head>
+
 <body>
-    
+
+  <main>
+
+    <!-- W27 - BUSCADOR DE CUIDADORES -->
+    <section id="w27">
+
+      <div class="w27-contenedor">
+
+        <!-- Filtros de búsqueda -->
+        <form class="w27-filtros" id="w27-form-filtros">
+
+          <div class="w27-campo">
+            <label for="w27-servicio">Servicio</label>
+
+            <select id="w27-servicio" name="servicio">
+              <option value="">Todos</option>
+              <option value="Paseo">Paseo</option>
+              <option value="Cuidado">Cuidado</option>
+              <option value="Visita">Visita</option>
+            </select>
+          </div>
+
+          <div class="w27-campo">
+            <label for="w27-fecha">Fecha</label>
+
+            <input
+              type="date"
+              id="w27-fecha"
+              name="fecha"
+            >
+          </div>
+
+          <div class="w27-campo">
+            <label for="w27-zona">Zona</label>
+
+            <select id="w27-zona" name="zona">
+              <option value="">Todas</option>
+              <option value="Cochabamba">Cochabamba</option>
+              <option value="Santa Cruz">Santa Cruz</option>
+              <option value="La Paz">La Paz</option>
+            </select>
+          </div>
+
+          <div class="w27-campo">
+            <label for="w27-precio">Precio</label>
+
+            <select id="w27-precio" name="precio">
+              <option value="">Cualquiera</option>
+              <option value="0-50">Hasta 50 BS</option>
+              <option value="50-100">50-100 BS</option>
+              <option value="100-150">100-150 BS</option>
+              <option value="150-9999">Más de 150 BS</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="w27-boton-buscar"
+          >
+            Buscar
+          </button>
+
+        </form>
+
+        <!-- Resultados de búsqueda -->
+        <div class="w27-resultados-contenedor" aria-live="polite">
+
+          <p class="w27-contador" id="w27-contador">
+            Selecciona tus filtros y presiona "Buscar".
+          </p>
+
+          <div
+            class="w27-resultados"
+            id="w27-resultados"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- FIN W27 -->
+
+  </main>
+
+  <!-- JavaScript del buscador -->
+  <script src="js/script.js" defer></script>
+
 </body>
 </html>

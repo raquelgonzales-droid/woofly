@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Lucía Fernández - Woofly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- W1: MENÚ DE NAVEGACIÓN -->
+    <header id="w1" class="header">
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo-woofly.png" alt="Logo Woofly">
+                </a>
+            </div>
+
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#w11" class="active">Encontrar cuidador</a></li>
+                <li><a href="index.html#w6">Servicios</a></li>
+                <li><a href="comofunciona.html">Cómo funciona</a></li>
+                <li><a href="#">Ser cuidador</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+
+            <!-- BOTONES -->
+            <div class="nav-buttons">
+                <a href="#" class="btn-login">Iniciar sesión</a>
+                <a href="#" class="btn-register">Registrarme</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="perfil-contenedor">
+
+        <!-- RUTA DE NAVEGACIÓN -->
+        <nav class="perfil-ruta" aria-label="Ruta de navegación">
+            <a href="index.html">Encontrar cuidador</a>
+            <span>›</span>
+            <span>Perfil de Lucía Fernández</span>
+        </nav>
+
+        <!-- DISEÑO EN DOS COLUMNAS SEGÚN FIGMA -->
+        <div class="perfil-grid">
+
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="perfil-columna-izq">
+
+                <!-- ESPACIO RESERVADO: CABECERA DE LUCÍA FERNÁNDEZ -->
+                <div class="perfil-espacio-cabecera"></div>
+
+                <!-- W19: PRESENTACIÓN (RAQUEL) -->
+                <section id="w19" class="w19-tarjeta">
+                    <h2>Presentación</h2>
+                    <p>
+                        ¡Hola! Soy Lucía, amante de los animales desde siempre. Disfruto acompañando a las mascotas en sus paseos y cuidándolas como si fueran mías. Ofrezco paseos activos, mucho cariño y comunicación constante con fotos y actualizaciones durante cada servicio.
+                    </p>
+                </section>
+
+                <!-- W21: SERVICIOS OFRECIDOS (COMPAÑERA) -->
+                <section id="w21">
+                    <div class="w21-card">
+                        <div class="w21-cabecera">
+                            <h1>Servicios ofrecidos</h1>
+                            <button class="w21-btn w21-btn-sec" type="button" id="w21-abrir">
+                                ✏️ Editar
+                            </button>
+                        </div>
+                        <ul class="w21-servicios" id="w21-servicios"></ul>
+                    </div>
+
+                    <dialog id="w21-ventana" aria-labelledby="w21-titulo-ventana">
+                        <div class="w21-modal">
+                            <div class="w21-modal-cab">
+                                <h2 id="w21-titulo-ventana">Editar servicios</h2>
+                                <button class="w21-btn w21-btn-sec w21-cerrar" type="button" id="w21-cerrar" aria-label="Cerrar">✕</button>
+                            </div>
+
+                            <form class="w21-formulario" id="w21-formulario" novalidate>
+                                <label class="w21-campo">
+                                    Icono
+                                    <select id="w21-icono">
+                                        <option>🐾</option>
+                                        <option>🏠</option>
+                                        <option>❤️</option>
+                                        <option>🦮</option>
+                                        <option>🐕</option>
+                                        <option>🐈</option>
+                                        <option>🛁</option>
+                                        <option>✂️</option>
+                                        <option>🚗</option>
+                                        <option>🩺</option>
+                                    </select>
+                                </label>
+
+                                <label class="w21-campo w21-nombre-campo">
+                                    Nombre del servicio
+                                    <input id="w21-nombre" type="text" maxlength="40" placeholder="Ej.: Baño y corte">
+                                </label>
+
+                                <label class="w21-campo">
+                                    Precio (Bs)
+                                    <input id="w21-precio" type="number" min="0" step="any" placeholder="0">
+                                </label>
+
+                                <label class="w21-campo">
+                                    Cobro
+                                    <select id="w21-unidad">
+                                        <option value="">Por servicio</option>
+                                        <option value="/día">Por día</option>
+                                        <option value="/hora">Por hora</option>
+                                    </select>
+                                </label>
+
+                                <p class="w21-error" id="w21-error" role="alert"></p>
+
+                                <div class="w21-acciones">
+                                    <button class="w21-btn" type="submit" id="w21-guardar">Añadir servicio</button>
+                                    <button class="w21-btn w21-btn-sec" type="button" id="w21-cancelar" hidden>Cancelar edición</button>
+                                </div>
+                            </form>
+
+                            <ul class="w21-lista" id="w21-lista"></ul>
+
+                            <div class="w21-modal-pie">
+                                <button class="w21-btn w21-btn-sec w21-pequeno" type="button" id="w21-restaurar">Restaurar servicios iniciales</button>
+                                <button class="w21-btn" type="button" id="w21-listo">Listo</button>
+                            </div>
+                        </div>
+                    </dialog>
+                </section>
+
+                <!-- W25: RESEÑAS DE OTRAS FAMILIAS (RAQUEL) -->
+                <section id="w25" class="w25-tarjeta">
+                    <h2>Reseñas de otras familias</h2>
+
+                    <div class="w25-lista">
+                        <article class="w25-item">
+                            <img src="resena-elena.png" alt="Foto de Elena R." class="w25-avatar">
+                            <div class="w25-contenido">
+                                <div class="w25-cabecera">
+                                    <h3>Elena R.</h3>
+                                    <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+                                </div>
+                                <p>
+                                    Lucía cuidó a Toby durante una semana y todo fue perfecto. Nos enviaba fotos cada día y se notaba que Toby estaba feliz. ¡Totalmente recomendada!
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="w25-item">
+                            <img src="resena-javier.png" alt="Foto de Javier M." class="w25-avatar">
+                            <div class="w25-contenido">
+                                <div class="w25-cabecera">
+                                    <h3>Javier M.</h3>
+                                    <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+                                </div>
+                                <p>
+                                    Muy puntual y cariñosa con Luna. Los paseos son largos y siempre vuelve contenta y cansada. Repetiremos seguro.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="w25-item">
+                            <img src="resena-carmen.png" alt="Foto de Carmen L." class="w25-avatar">
+                            <div class="w25-contenido">
+                                <div class="w25-cabecera">
+                                    <h3>Carmen L.</h3>
+                                    <span class="w25-estrellas" aria-label="5 de 5 estrellas">★★★★★</span>
+                                </div>
+                                <p>
+                                    Confié en ella para cuidar a mis dos gatos y quedé encantada. Muy responsable y atenta a cada detalle. Da mucha tranquilidad.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- COLUMNA DERECHA (ESPACIO RESERVADO PARA SOLICITAR SERVICIO) -->
+            <aside class="perfil-columna-der">
+                <div class="perfil-espacio-reserva"></div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
