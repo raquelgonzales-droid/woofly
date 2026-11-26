@@ -7,10 +7,63 @@
     <title>Servicios ofrecidos</title>
 
    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="perfil-cuidador.css">
+    <link rel="stylesheet" href="solicitar-servicio.css">
 </head>
 
 <body>
+<main class="woofly-profile-wrapper">
+      <div class="woofly-container">
+        <nav class="woofly-breadcrumb" aria-label="Ruta de navegación">
+          <a href="encontrar.html" class="woofly-breadcrumb__link">Encontrar cuidador</a>
+          <span class="woofly-breadcrumb__separator" aria-hidden="true">&gt;</span>
+          <span class="woofly-breadcrumb__current">Perfil de Lucía Fernández</span>
+        </nav>
 
+        <section class="caregiver-header" aria-labelledby="caregiver-name">
+          <div class="caregiver-header__avatar-box">
+            <img
+              src="lucia-fernandez.png"
+              alt="Foto de perfil de Lucía Fernández"
+              class="caregiver-header__avatar"
+            />
+          </div>
+
+          <div class="caregiver-header__info">
+            <h1 id="caregiver-name" class="caregiver-header__name">Lucía Fernández</h1>
+
+            <p class="caregiver-header__subtitle">
+              <span>Paseadora y cuidadora</span>
+              <span class="caregiver-header__dot" aria-hidden="true">&middot;</span>
+              <span>Cochabamba, Bolivia</span>
+            </p>
+
+            <div class="caregiver-header__meta">
+              <div class="caregiver-header__rating">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623" aria-hidden="true">
+                  <path d="M12 2.25c.43 0 .82.24 1.01.62l2.53 5.13 5.66.82c.42.06.77.36.9.76.13.4.02.84-.28 1.14l-4.1 3.99.97 5.64c.07.42-.1.84-.44 1.09-.34.25-.79.28-1.17.08L12 18.86l-5.06 2.66c-.38.2-.83.17-1.17-.08-.34-.25-.51-.67-.44-1.09l.97-5.64-4.1-3.99a1.12 1.12 0 0 1-.28-1.14c.13-.4.48-.7.9-.76l5.66-.82 2.53-5.13c.19-.38.58-.62 1.01-.62z" />
+                </svg>
+                <span class="caregiver-header__score">4.9</span>
+                <span class="caregiver-header__reviews">&middot; 128 reseñas</span>
+              </div>
+
+              <span class="caregiver-header__verified-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#35A795" aria-hidden="true">
+                  <path d="M12 1.5l2.35 1.54 2.8-.18 1.24 2.51 2.51 1.24-.18 2.8L22.26 12l-1.54 2.35.18 2.8-2.51 1.24-1.24 2.51-2.8-.18L12 22.26l-2.35-1.54-2.8.18-1.24-2.51-2.51-1.24.18-2.8L1.74 12l1.54-2.35-.18-2.8 2.51-1.24 1.24-2.51 2.8.18L12 1.5zm-1.15 13.78l5.3-5.3-1.41-1.42-3.89 3.89-1.79-1.79-1.41 1.41 3.2 3.21z" />
+                </svg>
+                Verificada
+              </span>
+            </div>
+
+            <ul class="caregiver-header__services" aria-label="Servicios ofrecidos">
+              <li class="caregiver-header__service-tag">Paseo</li>
+              <li class="caregiver-header__service-tag">Cuidado en casa</li>
+              <li class="caregiver-header__service-tag">Visitas</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
     <!-- SECCIÓN 21: SERVICIOS OFRECIDOS -->
     <section id="w21">
 
@@ -114,7 +167,146 @@
         </dialog>
 
     </section>
+<!-- SECCIÓN 24: SOLICITAR SERVICIO -->
+    <aside id="w24" class="w24-wrapper" aria-labelledby="w24-title">
+      <div class="w24-card">
+        <div class="w24-price-row">
+          <span class="w24-price">Desde 50 BS</span>
+          <span class="w24-price-unit">/ servicio</span>
+        </div>
 
+        <h2 id="w24-title" class="w24-title">Solicitar servicio</h2>
+
+        <form class="w24-form" action="#" method="post">
+          <div class="w24-field">
+            <label for="w24-servicio" class="w24-label">Seleccionar servicio</label>
+            <div class="w24-select-box">
+              <svg
+                class="w24-field-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#183661"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              <select id="w24-servicio" name="servicio" class="w24-select">
+                <option value="paseo" selected>Paseo</option>
+                <option value="cuidado">Cuidado en casa</option>
+                <option value="visitas">Visitas</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="w24-row-2col">
+            <div class="w24-field">
+              <label for="w24-fecha" class="w24-label">Fecha</label>
+              <div class="w24-input-box">
+                <svg
+                  class="w24-field-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#183661"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="3" ry="3"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <input
+                  type="date"
+                  id="w24-fecha"
+                  name="fecha"
+                  value="2026-06-12"
+                  class="w24-input w24-input--right"
+                />
+              </div>
+            </div>
+
+            <div class="w24-field">
+              <label for="w24-hora" class="w24-label">Hora</label>
+              <div class="w24-input-box">
+                <svg
+                  class="w24-field-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#183661"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <polyline points="12 7 12 12 15 14"></polyline>
+                </svg>
+                <input
+                  type="time"
+                  id="w24-hora"
+                  name="hora"
+                  value="10:00"
+                  class="w24-input w24-input--right"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="w24-field">
+            <label for="w24-mascota" class="w24-label">Información de la mascota</label>
+            <input
+              type="text"
+              id="w24-mascota"
+              name="mascota"
+              placeholder="Nombre, raza y tamaño"
+              class="w24-text-input"
+            />
+          </div>
+
+          <div class="w24-field">
+            <label for="w24-comentarios" class="w24-label">Comentarios</label>
+            <textarea
+              id="w24-comentarios"
+              name="comentarios"
+              rows="3"
+              placeholder="Cuéntale a Lucía lo que tu mascota necesita..."
+              class="w24-textarea"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="w24-submit-btn">Continuar</button>
+
+          <p class="w24-disclaimer">No se te cobrará hasta confirmar la reserva.</p>
+        </form>
+      </div>
+
+      <div class="w24-trust-card" role="note">
+        <svg
+          class="w24-trust-icon"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="#35A795"
+          aria-hidden="true"
+        >
+          <path d="M12 2L4 5.5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5.5L12 2zm-1.15 13.78l-3.2-3.21 1.41-1.41 1.79 1.79 3.89-3.89 1.41 1.42-5.3 5.3z" />
+        </svg>
+        <p class="w24-trust-text">
+          Pagos protegidos y cuidadores verificados por WOOFLY.
+        </p>
+      </div>
+    </aside>
    <script src="js/script.js"></script>
 
 </body>

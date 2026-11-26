@@ -1,0 +1,207 @@
+.w24-wrapper {
+  max-width: 400px;
+  margin: 24px auto 48px;
+  padding: 0 16px;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.w24-card {
+  background-color: #ffffff;
+  border-radius: 26px;
+  padding: 28px 26px 24px;
+  box-shadow: 0 10px 30px rgba(24, 54, 97, 0.06);
+}
+
+.w24-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.w24-price {
+  font-size: 30px;
+  font-weight: 800;
+  color: #183661;
+  letter-spacing: -0.02em;
+}
+
+.w24-price-unit {
+  font-size: 14px;
+  font-weight: 400;
+  color: #949ca8;
+}
+
+.w24-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #183661;
+  margin-bottom: 18px;
+}
+
+.w24-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.w24-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.w24-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #5d6b82;
+}
+
+.w24-select-box,
+.w24-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f4f0e8;
+  border: 1px solid #e8e2d5;
+  border-radius: 14px;
+  padding: 0 14px;
+  height: 46px;
+  transition: border-color 0.2s ease;
+}
+
+.w24-select-box:focus-within,
+.w24-input-box:focus-within,
+.w24-text-input:focus,
+.w24-textarea:focus {
+  border-color: #183661;
+  outline: none;
+}
+
+.w24-field-icon {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.w24-select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #183661;
+  text-align: right;
+  text-align-last: right;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.w24-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.w24-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #183661;
+  outline: none;
+  cursor: pointer;
+}
+
+.w24-input--right {
+  text-align: right;
+}
+
+.w24-text-input,
+.w24-textarea {
+  width: 100%;
+  background-color: #f4f0e8;
+  border: 1px solid #e8e2d5;
+  border-radius: 14px;
+  padding: 13px 15px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #183661;
+  transition: border-color 0.2s ease;
+}
+
+.w24-text-input::placeholder,
+.w24-textarea::placeholder {
+  color: #a09b93;
+  font-weight: 400;
+}
+
+.w24-textarea {
+  resize: vertical;
+  min-height: 82px;
+  line-height: 1.45;
+}
+
+.w24-submit-btn {
+  margin-top: 4px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 9999px;
+  background-color: #f3a11a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.w24-submit-btn:hover {
+  background-color: #e09110;
+}
+
+.w24-submit-btn:active {
+  transform: scale(0.99);
+}
+
+.w24-disclaimer {
+  text-align: center;
+  font-size: 11.5px;
+  color: #949ca8;
+  margin-top: -2px;
+}
+
+.w24-trust-card {
+  margin-top: 16px;
+  background-color: #e6f7f4;
+  border-radius: 18px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.w24-trust-icon {
+  flex-shrink: 0;
+}
+
+.w24-trust-text {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #35a795;
+}
+
+@media (max-width: 420px) {
+  .w24-row-2col {
+    grid-template-columns: 1fr;
+  }
+}
